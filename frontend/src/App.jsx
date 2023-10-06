@@ -9,6 +9,8 @@ import NotFound from "./components/NotFound";
 import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
 import { AppProvider } from "./AppContext";
+import AddFurniture from "./components/AddFurniture";
+import BrowseFurniture from "./components/BrowseFurniture";
 // import { CartProvider } from "./CartContext";
 // import CartPage from "./components/CartPage";
 
@@ -33,7 +35,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
-            <Route path="/AddFurniture" element={<Add-Furniture />} />
+            <Route path="/addfurniture" element={<AddFurniture />} />
+            <Route path="/browsefurniture" element={<BrowseFurniture />} />
             {/* <Route path="/cartpage" element={<CartPage />} /> */}
            
             <Route path="*" element={<NotFound />} />

@@ -44,14 +44,14 @@ const Navbar = ({ mycart }) => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/AddFurniture">
-                Add-Furniture
+              <NavLink className="nav-link" to="/addfurniture">
+                Add Furniture
               </NavLink>
             </li>
             
             <li className="nav-item">
-              <NavLink className="nav-link" to="/cartpage">
-                Cart
+              <NavLink className="nav-link" to="/browsefurniture">
+                Browse Furniture
               </NavLink>
             </li>
             {/* <li className="nav-item"><h4>Cart Items : {cartitems.length}</h4></li> */}
