@@ -22,9 +22,9 @@ const Navbar = ({ mycart }) => {
     <nav className=" navbar navbar-expand-lg bg-body-secondary text-dark">
       {/* <nav className="navbar navbar-expand-lg bg-success text-white"> */}
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
+        <NavLink className="navbar-brand" to={"/"}>
         VintiMart
-        </a>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
