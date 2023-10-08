@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import productData from "./DummyData"
+import useCartContext from '../CartContext';
 
 const BrowseFurniture = () => {
 
@@ -6,7 +8,7 @@ const BrowseFurniture = () => {
 
   const {addItemToCart} = useCartContext();
 
-  const brands = ["Asus", "Dell", "Apple", "Lenevo", "HP"];
+  const brands = ["pepperfry", "urban ladder", "godrej", "durian","wood mount", "royal Oak","zuari", "damro"];
   const searchProduct = (e) => {
     const search = e.target.value;
     let filteredData = productData.filter((product) => {
@@ -24,7 +26,7 @@ const BrowseFurniture = () => {
   return (
     <div>
       <header className="bg-dark">
-        <div className="conatiner py-5">
+        <div className="container py-5">
           <h1 className="text-center mb-5 text-white fw-bold">
             Find Your Requirement
           </h1>
@@ -39,11 +41,11 @@ const BrowseFurniture = () => {
         <div className="col-3">
           <div className="card">
             <div className="card-body">
-              <h3>Filter Options</h3>
+              <h6 className='text-muted text-center'>Apply Filter</h6>
               <hr />
 
               <select className="form-control" onChange={filterBrand}>
-                <option value="">Select Brand</option>
+                <option className='text-center' value="">Select Brand</option>
                 {brands.map((b) => (
                   <option value={b}>{b}</option>
                 ))}
@@ -58,7 +60,7 @@ const BrowseFurniture = () => {
               {productsArray.map((product) => (
                 <div className="col-md-3 mb-4">
                   <div className="card" style={{ overflow: "hidden" }}>
-                    <img src={product.Image} alt="" className="my-card-img" />
+                    <img src={product.image} alt="" className="my-card-img" />
                     <div className="card-body">
                       <p className="text-muted">
                         {product.sponsored ? "sponsored" : ""}

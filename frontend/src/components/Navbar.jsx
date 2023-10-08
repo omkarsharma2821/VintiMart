@@ -54,6 +54,11 @@ const Navbar = ({ mycart }) => {
                 Browse Furniture
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/cartpage">
+                Cart
+              </NavLink>
+            </li>
             {/* <li className="nav-item"><h4>Cart Items : {cartitems.length}</h4></li> */}
             {showLoginOptions()}
           </ul>

@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+.my-card-img{
+  object-fit: cover;
+  height: 200px;
+  transition-duration: 0.3;
+}
+.my-card-img{
+  transform: scale(1.2);
+}

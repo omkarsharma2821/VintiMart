@@ -11,8 +11,8 @@ import Navbar from "./components/Navbar";
 import { AppProvider } from "./AppContext";
 import AddFurniture from "./components/AddFurniture";
 import BrowseFurniture from "./components/BrowseFurniture";
-// import { CartProvider } from "./CartContext";
-// import CartPage from "./components/CartPage";
+import { CartProvider } from "./CartContext";
+import CartPage from "./components/CartPage";
 
 function App() {
   // let cartitems = 20; //props means property. advantage of global variable is that it can be change
@@ -24,7 +24,7 @@ function App() {
       <BrowserRouter>
       <AppProvider>
         
-          {/* <CartProvider> */}
+          <CartProvider>
           {/* rouetes mtlb address create krna */}
           {/* <Link to ="/login">Login</Link> */}
           {/* <Link to ="/signup">Signup</Link> */}
@@ -37,10 +37,11 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/addfurniture" element={<AddFurniture />} />
             <Route path="/browsefurniture" element={<BrowseFurniture />} />
-            {/* <Route path="/cartpage" element={<CartPage />} /> */}
+            <Route path="/cartpage" element={<CartPage />} />
            
             <Route path="*" element={<NotFound />} />
           </Routes>
+          </CartProvider>
           </AppProvider>
       </BrowserRouter>
     </div>
