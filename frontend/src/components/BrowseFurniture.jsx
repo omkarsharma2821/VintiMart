@@ -66,11 +66,11 @@ const BrowseFurniture = () => {
                       <p className="text-muted">
                         {product.sponsored ? "sponsored" : ""}
                       </p>
-                      <h4>{product.brand}</h4>
-                      <h3>{product.model}</h3>
-                      <h2>{product.price}</h2>
+                      <h6>{product.model}</h6>
+                      <h6>{product.brand}</h6>
+                      <h6>{product.price}</h6>
                       <button onClick={() => {addItemToCart(product)}} className="btn btn-primary">Add to Cart</button>
-                      <button onClick={() => {addItemToCart(product)}} className="btn btn-primary">Buy Now</button>
+                      <button onClick={() => {addItemToCart(product)}} className="btn btn-primary mx-3">Buy Now</button>
                     </div>
                   </div>
                 </div>
