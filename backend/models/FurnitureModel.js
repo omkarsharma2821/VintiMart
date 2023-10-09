@@ -7,4 +7,4 @@ const mySchema = new Schema({
     yearsOld : Number
 })
 
-module.exports = model('users', mySchema);
+module.exports = model('furniture', mySchema);
