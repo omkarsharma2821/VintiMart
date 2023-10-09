@@ -44,3 +44,6 @@
 .my-card-img{
   transform: scale(1.2);
 }
+.cart-img{
+  object-fit: cover;
+}

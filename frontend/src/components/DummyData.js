@@ -43,7 +43,7 @@ const productData = [
     },
     {
         id: 8910,
-        brand: 'royal Oak',
+        brand: 'royal oak',
         price: 4000,
         material: 'hard board',
         image: "https://sweetlandoutdoor.com/wp-content/uploads/2020/05/AMonBKDiningset20-1024x727.jpg",

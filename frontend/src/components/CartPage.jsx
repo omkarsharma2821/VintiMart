@@ -6,14 +6,15 @@ const diaplayCartItems = () => {
     if(!cartitems.length) return <h1 className="text-center display-4 text-muted">
         No Items in Cart
     </h1>
-    return <table className="table">
-        <thead>
+    return <table className="table table-bordered table align-middle text-center table-hover">
+        <thead className="table-primary ">
 
             <tr>
-                <th>Image</th>
-                <th>Title</th>
-                <th>Price</th>
-                <th>Rating</th>
+                <th className="width">Image</th>
+                <th>Brand</th>
+                <th>Price</th> 
+                <th>Material</th>
+                <th colSpan={2} className='text-center'>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -21,13 +22,16 @@ const diaplayCartItems = () => {
                 cartitems.map((item, index) =>(
                         <tr>
                             <td>
-                                <img height={50} src={item.image} alt =""/>
+                                <img className="cart-img" height={50} src={item.image} alt =""/>
                             </td>
                             <td>{item.brand}</td>
                             <td>{item.price}</td>
-                            <td>{item.FurnitureMaterial}</td>
+                            <td>{item.material}</td>
                             <td> 
-                            <button className="btn btn-danger" onClick={ () => removeItemFromCart(index)}>Remove Items</button>
+                            <button className="btn btn-danger" onClick={ () => removeItemFromCart(index)}>Remove Item</button>
+                            </td>
+                            <td> 
+                            <button className="btn btn-primary" onClick={ () => removeItemFromCart(index)}>Buy Item</button>
                             </td>
                         </tr>
                 ))

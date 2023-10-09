@@ -26,10 +26,11 @@ const BrowseFurniture = () => {
   return (
     <div>
       <header className="bg-dark">
-        <div className="container py-5">
-          <h1 className="text-center mb-5 text-white fw-bold">
-            Find Your Requirement
+        <div className="container py-4">
+          <h1 className="text-center display-4 mb-0 text-white fw-bold">
+          Discover Your Style
           </h1>
+            <h5 className='text-white text-center mb-4'>Furniture for Sale - Where Comfort Meets Elegance</h5>
           <input
             type="text"
             className="form-control w-75 m-auto"
@@ -69,6 +70,7 @@ const BrowseFurniture = () => {
                       <h3>{product.model}</h3>
                       <h2>{product.price}</h2>
                       <button onClick={() => {addItemToCart(product)}} className="btn btn-primary">Add to Cart</button>
+                      <button onClick={() => {addItemToCart(product)}} className="btn btn-primary">Buy Now</button>
                     </div>
                   </div>
                 </div>
