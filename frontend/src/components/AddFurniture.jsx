@@ -6,4 +6,4 @@ const AddFurniture = () => {
   )
 }
 
-export default AddFurniture
+export default AddFurniture;
