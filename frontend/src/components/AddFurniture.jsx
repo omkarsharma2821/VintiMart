@@ -6,7 +6,7 @@ const AddFurniture = () => {
     <header className="bg-dark w-75 rounded mx-auto">
       <div className='container py-3'>
           <h1 className="text-center mb-3 text-white fw-bold">
-          Display Your Merchandise for Sale
+          Add Your Furniture to Sell
           </h1>
           </div> 
           </header>
@@ -36,13 +36,6 @@ const AddFurniture = () => {
                   className="form-control mt-2 mb-4"
                   placeholder="mobile no"
                 />
-                <input
-                  id="password"
-                  type="password"
-                  className="form-control mt-2 mb-4"
-                  placeholder="password"
-                />
-          
                 <button
                   type="submit"
                   className="col-6 btn btn-danger w-50 mx-auto mt-5 d-flex justify-content-center"

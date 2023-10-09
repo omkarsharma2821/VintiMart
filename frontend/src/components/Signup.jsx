@@ -156,11 +156,11 @@ const Signup = () => {
                 />
                 <button
                   type="submit"
-                  className="col-6 btn btn-danger w-50 mx-auto mt-5 d-flex justify-content-center"
+                  className="col-6 btn btn-danger w-50 mx-auto mt-4 d-flex justify-content-center"
                 >
                   Create account
                 </button>
-                <span className="d-flex justify-content-center mb-2">
+                <span className="d-flex justify-content-center mb-0">
                   Already have an account -
                   <span>
                     <NavLink to="/login">Login</NavLink>

@@ -33,12 +33,13 @@ function App() {
 
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
             <Route path="/addfurniture" element={<AddFurniture />} />
             <Route path="/browsefurniture" element={<BrowseFurniture />} />
             <Route path="/cartpage" element={<CartPage />} />
+            <Route path="/contact" element={<Contact />} />
            
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           </CartProvider>

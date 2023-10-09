@@ -78,8 +78,7 @@ const Contact = () => {
                   placeholder="Email"
                 />
                 <label className="d-flex align-items-center">Message</label>
-                {/* <textarea name="" id="" cols={80} rows={3} defaultValue={" "} /> */}
-                <input type="text" className="form-control mt-2 mb-4" />
+                <textarea name="" id="" cols={80} rows={3} defaultValue={" "} className="form-control" placeholder="Type your message" />
                 <button className="col-6 text-center btn btn-danger w-50 mx-auto d-flex justify-content-center mt-5 mb-4">
                   Submit Query
                 </button>
