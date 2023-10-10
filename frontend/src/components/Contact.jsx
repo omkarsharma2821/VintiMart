@@ -46,8 +46,8 @@ const Contact = () => {
         {/* <div className="d-flex justify-content-center align-items-center vh-80 bg-body-secondary"> */}
         <div className="">
           <div className="card col-6 col-md-6 w-50 mx-auto">
-            <div className="p-4">
-              <h2 className="text-center mt-2 mb-4 fw-semibold">Contact Us</h2>
+            <div className="p-5">
+              <h2 className="text-center mt-0 mb-0 fw-semibold">Contact Us</h2>
               <form onSubmit={contactForm.handleSubmit}>
                 <div className="form-floating">
                 <input
@@ -85,7 +85,7 @@ const Contact = () => {
                 <textarea name="" id="" cols={80} rows={3} defaultValue={" "} className="form-control" placeholder="Type your message" />
                 <label>Message</label>
                 </div>
-                <button className="col-6 text-center btn btn-danger w-50 mx-auto d-flex justify-content-center mt-5 mb-4">
+                <button className="col-6 text-center btn btn-danger w-50 mx-auto d-flex justify-content-center mt-4 mb-0">
                   Submit Query
                 </button>
               </form>
