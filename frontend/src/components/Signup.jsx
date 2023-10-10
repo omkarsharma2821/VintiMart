@@ -78,11 +78,11 @@ const Signup = () => {
             </h4>
           </div>
         </header>
-        <div className="d-flex justify-content-center img align-items-center vh-50 bg-body-secondary">
+        <div className="d-flex justify-content-center img align-items-center vh-50 bg-body-secondary form-floating">
           <div className="card w-50 col-6 col-md-6 ">
             <div className="p-5">
               <h2 className="text-center fw-semibold ">SignUp</h2>
-              <form onSubmit={signupForm.handleSubmit}>
+              <form onSubmit={signupForm.handleSubmit} >
                 <label>Name</label>
                 <span
                   style={{ fontSize: 10, marginLeft: "10px", color: "red" }}

@@ -4,7 +4,7 @@ const mySchema = new Schema({
     brand : String,
     material : String,
     Price : Number,
-    yearsOld : Number
+    yearsold : Number
 })
 
 module.exports = model('furniture', mySchema);

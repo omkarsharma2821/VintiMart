@@ -71,30 +71,37 @@ const Login = () => {
               Login Here
             </h2>
             <form onSubmit={loginForm.handleSubmit}>
-              <label>Email </label>
-              <span style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
-                {loginForm.errors.email}
-              </span>
+              <div className="input-group">
+                {/* <span className="input-group-text"><i class="fa-regular fa-user"></i></span> */}
+                <div className="form-floating">
               <input
                 id="email"
                 onChange={loginForm.handleChange}
                 value={loginForm.values.email}
                 type="email"
-                className="form-control mt-2 mb-4"
-                placeholder="Enter your email address"
+                className="form-control"
+                placeholder="Email address"
               />
-              <label>Password</label>
+              <label for="email">Email address</label>
               <span style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
-                {loginForm.errors.password}
+                {loginForm.errors.email}
               </span>
+              </div>
+              </div>
+              <div className="form-floating">
               <input
                 id="password"
                 onChange={loginForm.handleChange}
                 value={loginForm.values.password}
                 type="password"
-                className="form-control mt-2 mb-4"
+                className="form-control"
                 placeholder="Enter your password"
               />
+              <label for='password'>Password</label>
+              <span style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
+                {loginForm.errors.password}
+              </span>
+              </div>
               <button
                 type="submit"
                 className="btn btn-danger mx-auto mb-2 d-flex justify-content-center w-50 mt-5"

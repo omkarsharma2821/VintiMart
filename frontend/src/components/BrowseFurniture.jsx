@@ -31,11 +31,14 @@ const BrowseFurniture = () => {
           Discover Your Style
           </h1>
             <h5 className='text-white text-center mb-4'>Furniture for Sale - Where Comfort Meets Elegance</h5>
+            <div className='input-group'>
           <input
             type="text"
-            className="form-control w-75 m-auto"
+            className='form-control w-25 m-auto'
             onChange={searchProduct}
           />
+            {/* <button><i class="fa-solid fa-magnifying-glass"></i></button> */}
+            </div>
         </div>
       </header>
       <div className="row mt-4">
@@ -83,4 +86,4 @@ const BrowseFurniture = () => {
   )
 }
 
-export default BrowseFurniture
+export default BrowseFurniture;
