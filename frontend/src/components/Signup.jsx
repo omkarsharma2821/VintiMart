@@ -83,19 +83,30 @@ const Signup = () => {
             <div className="p-5">
               <h2 className="text-center fw-semibold ">SignUp</h2>
               <form onSubmit={signupForm.handleSubmit} >
-                <label>Name</label>
-                <span
-                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
-                >
-                  {signupForm.touched.name && signupForm.errors.name}
-                </span>
+                <div className="form-floating">
                 <input
                   id="name"
                   onChange={signupForm.handleChange}
                   value={signupForm.values.name}
                   type="text"
-                  className="form-control mt-2 mb-4"
+                  className="form-control"
                   placeholder="Username"
+                />
+                <label>Username</label>
+                <span
+                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
+                >
+                  {signupForm.touched.name && signupForm.errors.name}
+                </span>
+                </div>
+                <div className="form-floating">
+                <input
+                  id="email"
+                  onChange={signupForm.handleChange}
+                  value={signupForm.values.email}
+                  type="email"
+                  className="form-control"
+                  placeholder="Email"
                 />
                 <label>Email</label>
                 <span
@@ -103,13 +114,15 @@ const Signup = () => {
                 >
                   {signupForm.touched.email && signupForm.errors.email}
                 </span>
+                </div>
+                {/* <div className="form-floating">
                 <input
-                  id="email"
+                  id="phone"
                   onChange={signupForm.handleChange}
-                  value={signupForm.values.email}
-                  type="email"
-                  className="form-control mt-2 mb-4"
-                  placeholder="Email"
+                  value={signupForm.values.phone}
+                  type="tel"
+                  className="form-control"
+                  placeholder="Phone"
                 />
                 <label>Phone</label>
                 <span
@@ -117,13 +130,15 @@ const Signup = () => {
                 >
                   {signupForm.touched.phone && signupForm.errors.phone}
                 </span>
+                </div> */}
+                <div className="form-floating">
                 <input
-                  id="phone"
+                  id="password"
                   onChange={signupForm.handleChange}
-                  value={signupForm.values.phone}
-                  type="tel"
-                  className="form-control mt-2 mb-4"
-                  placeholder="Phone"
+                  value={signupForm.values.password}
+                  type="password"
+                  className="form-control"
+                  placeholder="password"
                 />
                 <label>Password</label>
                 <span
@@ -131,12 +146,14 @@ const Signup = () => {
                 >
                   {signupForm.touched.password && signupForm.errors.password}
                 </span>
+                </div>
+                <div className="form-floating">
                 <input
-                  id="password"
+                  id="confirm_password"
                   onChange={signupForm.handleChange}
-                  value={signupForm.values.password}
+                  value={signupForm.values.confirmpassword}
                   type="password"
-                  className="form-control mt-2 mb-4"
+                  className="form-control"
                   placeholder="password"
                 />
                 <label>Confirm Password</label>
@@ -146,17 +163,10 @@ const Signup = () => {
                   {signupForm.touched.confirmpassword &&
                     signupForm.errors.confirmpassword}
                 </span>
-                <input
-                  id="confirm_password"
-                  onChange={signupForm.handleChange}
-                  value={signupForm.values.confirmpassword}
-                  type="password"
-                  className="form-control mt-2 mb-4"
-                  placeholder="password"
-                />
+                </div>
                 <button
                   type="submit"
-                  className="col-6 btn btn-danger w-50 mx-auto mt-4 d-flex justify-content-center"
+                  className="col-6 btn btn-danger w-50 mx-auto mt-0 d-flex justify-content-center"
                 >
                   Create account
                 </button>
