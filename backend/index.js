@@ -2,7 +2,7 @@
 
 const express = require('express');
 const userRouter = require('./routers/userRouter');
-// const productRouter  = require('./routers/productRouter');
+const furnitureRouter  = require('./routers/furnitureRouter');
 const cors = require('cors');
 
 //intialize express
@@ -16,7 +16,7 @@ app.use(cors({
     origin: ['http://localhost:3000']
 }));
 app.use('/user', userRouter);
-// app.use('/product', productRouter);
+app.use('/furniture', furnitureRouter);
 
 // asynchornous wait nhi krta dusre function ka phle ho jata hai
 
