@@ -49,36 +49,42 @@ const Contact = () => {
             <div className="p-4">
               <h2 className="text-center mt-2 mb-4 fw-semibold">Contact Us</h2>
               <form onSubmit={contactForm.handleSubmit}>
-                <label>Name</label>
-                <span
-                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
-                >
-                  {contactForm.errors.name}
-                </span>
+                <div className="form-floating">
                 <input
                   id="name"
                   onChange={contactForm.handleChange}
                   value={contactForm.values.name}
                   type="text"
-                  className="form-control mt-2 mb-4"
+                  className="form-control "
                   placeholder="Username"
                 />
-                <label>Email</label>
+                <label>Username</label>
                 <span
                   style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
                 >
-                  {contactForm.errors.email}
+                  {contactForm.errors.name}
                 </span>
+                </div>
+                <div className="form-floating">
                 <input
                   id="email"
                   onChange={contactForm.handleChange}
                   value={contactForm.values.email}
                   type="email"
-                  className="form-control mt-2 mb-4"
+                  className="form-control"
                   placeholder="Email"
                 />
-                <label className="d-flex align-items-center">Message</label>
+                <label>Email address</label>
+                <span
+                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
+                >
+                  {contactForm.errors.email}
+                </span>
+                </div>
+                <div className="form-floating">
                 <textarea name="" id="" cols={80} rows={3} defaultValue={" "} className="form-control" placeholder="Type your message" />
+                <label>Message</label>
+                </div>
                 <button className="col-6 text-center btn btn-danger w-50 mx-auto d-flex justify-content-center mt-5 mb-4">
                   Submit Query
                 </button>
