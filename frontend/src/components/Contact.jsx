@@ -1,5 +1,7 @@
 import { useFormik } from "formik";
 import React from "react";
+import { Navigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import * as Yup from "yup";
 
 const ContactSchema = Yup.object().shape({
@@ -16,12 +18,21 @@ const Contact = () => {
     initialValues: {
       name: "",
       email: "",
+      messasge: "",
     },
     // call back hmko nhi pta kb call hoga lekin aap call hoga sb condition met hogi  jaise isme submit kr  rhe
     onSubmit: (values, { resetForm }) => {
       console.log(values);
       resetForm();
       // send values to backened.
+      if (true) {
+        Swal.fire({
+          icon: "success",
+          title: "Message Sent Successfully",
+          text: "Thank You, will reach you soon",
+        });
+        Navigate("/login");
+      }
     },
     validationSchema: ContactSchema,
   });
@@ -82,7 +93,7 @@ const Contact = () => {
                 </span>
                 </div>
                 <div className="form-floating">
-                <textarea name="" id="" cols={80} rows={3} defaultValue={" "} className="form-control" placeholder="Type your message" />
+                <textarea name="" id="msg" cols={80} rows={3} defaultValue={" "} className="form-control" placeholder="Type your message" />
                 <label>Message</label>
                 </div>
                 <button className="col-6 text-center btn btn-danger w-50 mx-auto d-flex justify-content-center mt-4 mb-0">

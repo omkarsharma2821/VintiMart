@@ -65,6 +65,8 @@ const Signup = () => {
     validationSchema: SignupSchema,
   });
 
+  
+
   return (
     <>
       <div className="bg-body-secondary img">

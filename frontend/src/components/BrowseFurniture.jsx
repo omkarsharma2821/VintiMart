@@ -8,7 +8,7 @@ const BrowseFurniture = () => {
 
   const {addItemToCart} = useCartContext();
 
-  const brands = ["pepperfry", "urban ladder", "godrej", "durian","wood mount", "royal Oak","zuari", "damro"];
+  const brands = ["pepperfry", "urban ladder", "godrej", "durian","wood mount", "royal oak","zuari", "damro"];
   const searchProduct = (e) => {
     const search = e.target.value;
     let filteredData = productData.filter((product) => {
@@ -34,7 +34,7 @@ const BrowseFurniture = () => {
             <div className='input-group'>
           <input
             type="text"
-            className='form-control w-25 m-auto'
+            className='form-control w-75 m-auto'
             onChange={searchProduct}
           />
             {/* <button><i class="fa-solid fa-magnifying-glass"></i></button> */}
