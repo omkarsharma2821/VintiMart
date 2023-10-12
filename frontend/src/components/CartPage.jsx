@@ -6,7 +6,7 @@ const diaplayCartItems = () => {
     if(!cartitems.length) return <h1 className="text-center display-4 text-muted">
         No Items in Cart
     </h1>
-    return <table className="table table-bordered table align-middle text-center table-hover">
+    return <table className="table table-bordered table align-middle text-center table-hover bg">
         <thead className="table-primary ">
 
             <tr>

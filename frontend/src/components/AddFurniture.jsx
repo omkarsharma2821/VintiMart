@@ -78,17 +78,17 @@ const AddFurniture = () => {
   })
 
   return (
-    <div className="container py-2">
-      <header className="bg-dark w-75 rounded mx-auto">
+    <div className=" py-5 bg">
+      <header className="bg-dark w-50 rounded mx-auto">
         <div className='container py-3'>
           <h1 className="text-center mb-3 text-white fw-bold">
-            Add Your Furniture to Sell
+            Add Furniture to Sell
           </h1>
         </div>
       </header>
       {/* <div className="img"> */}
       <div className="d-flex justify-content-center img align-items-center vh-50">
-        <div className="card w-75 col-6 col-md-6 ">
+        <div className="card w-50 col-6 col-md-6 ">
           <div className="p-5">
             <form onSubmit={furnitureForm.handleSubmit}>
               <div className="form-floating">

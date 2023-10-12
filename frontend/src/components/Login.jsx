@@ -63,7 +63,7 @@ const Login = () => {
 
   return (
     <>
-      <div className="d-flex justify-content-center align-items-center vh-100 py-5 bg-body-secondary p-5 img">
+      <div className="d-flex justify-content-center align-items-center vh-100 py-5 bg-body-secondary p-5 bg">
         <div className="card  p-4 w-50">
           <div className="p-4 ">
             <h2 className="text-center fw-semibold display-6 mb-5 mt-2">

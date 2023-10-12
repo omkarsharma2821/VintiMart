@@ -69,18 +69,18 @@ const Signup = () => {
 
   return (
     <>
-      <div className="bg-body-secondary img">
+      <div className="bg">
         <header className="bg-dark text-white w-50 mx-auto rounded ">
           <div className="container py-3">
             <h6 className="text-center display-6 fw-semibold ">
               Register for free, Hurry up!!
             </h6>
             <h4 className="text-center fw-light">
-              Create your account to save your journey
+              Create account to save your journey
             </h4>
           </div>
         </header>
-        <div className="d-flex justify-content-center img align-items-center vh-50 bg-body-secondary form-floating">
+        <div className="d-flex justify-content-center align-items-center vh-50 bg ">
           <div className="card w-50 col-6 col-md-6 ">
             <div className="p-5">
               <h2 className="text-center fw-semibold ">SignUp</h2>

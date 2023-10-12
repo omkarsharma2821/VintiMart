@@ -15,3 +15,7 @@
 .cart-img{
   object-fit: cover;
 }
+.bg{
+  background-image: url(bg.jpg);
+  background-size: cover;
+}

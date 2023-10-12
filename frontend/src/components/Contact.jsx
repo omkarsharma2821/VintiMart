@@ -39,14 +39,14 @@ const Contact = () => {
 
   return (
     <>
-      <div className="bg-body-secondary img p-5">
+      <div className="bg-body-secondary bg p-5">
         <header className="bg-dark text-white w-50 rounded mx-auto ">
           <div className="container py-3 ">
             <h2 className="text-center display-4 fw-semibold">
               Get in touch with us
             </h2>
             <h5 className="text-center fw-light">
-              If you need help or have a question, we're here for you.
+              need help / have question ??, we're here for you.
             </h5>
             {/* <div class="input-group mt-5 w-75 mx-auto"> */}
             {/* <input type="text" class="form-control form-control-lg"> */}
@@ -57,8 +57,8 @@ const Contact = () => {
         {/* <div className="d-flex justify-content-center align-items-center vh-80 bg-body-secondary"> */}
         <div className="">
           <div className="card col-6 col-md-6 w-50 mx-auto">
-            <div className="p-5">
-              <h2 className="text-center mt-0 mb-0 fw-semibold">Contact Us</h2>
+            <div className="p-5 ">
+              <h2 className="text-center mb-3 fw-semibold">Contact Us</h2>
               <form onSubmit={contactForm.handleSubmit}>
                 <div className="form-floating">
                 <input

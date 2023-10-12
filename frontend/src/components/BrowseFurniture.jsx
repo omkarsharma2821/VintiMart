@@ -26,16 +26,17 @@ const BrowseFurniture = () => {
   return (
     <div>
       <header className="bg-dark">
-        <div className="container py-4">
-          <h1 className="text-center display-4 mb-0 text-white fw-bold">
+        <div className="container py-3">
+          <h1 className="text-center display-3 mb-0 text-white fw-bold">
           Discover Your Style
           </h1>
-            <h5 className='text-white text-center mb-4'>Furniture for Sale - Where Comfort Meets Elegance</h5>
-            <div className='input-group'>
+            <h5 className='text-white text-center mb-4 '>Home Decor for Sale - Where Comfort Meets Elegance</h5>
+            <div className='d-flex'>
           <input
             type="text"
             className='form-control w-75 m-auto'
             onChange={searchProduct}
+            placeholder='Search in VintiMart....'
           />
             {/* <button><i class="fa-solid fa-magnifying-glass"></i></button> */}
             </div>
@@ -69,7 +70,7 @@ const BrowseFurniture = () => {
                       <p className="text-muted">
                         {product.sponsored ? "sponsored" : ""}
                       </p>
-                      <h6>{product.model}</h6>
+                      {/* <h6>{product.model}</h6> */}
                       <h6>{product.brand}</h6>
                       <h6>{product.price}</h6>
                       <button onClick={() => {addItemToCart(product)}} className="btn btn-primary">Add to Cart</button>
