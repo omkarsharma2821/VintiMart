@@ -1,4 +1,5 @@
 import logo from "./logo.svg";
+// import bg from "./bg.jpg"
 import "./App.css";
 import Home from "./components/Home";
 import Signup from "./components/Signup";
@@ -17,9 +18,10 @@ import {Toaster} from 'react-hot-toast';
 
 function App() {
   // let cartitems = 20; //props means property. advantage of global variable is that it can be change
+  // const myStyle={backgroundImage: `url(${bg})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', height: '100vh' }
   return (
     <div>
-      {/* <h1>My react tab</h1> */}
+      {/* <div style={myStyle}> */}
       <Toaster position = "top-right"/>
       <BrowserRouter>
       <AppProvider>
@@ -30,6 +32,7 @@ function App() {
           {/* <Link to ="/signup">Signup</Link> */}
           {/* <Navbar mycart={cartitems} /> */}
           <Navbar  />
+      {/* <img src={logo} alt="" style={myStyle}/> */}
 
           <Routes>
             <Route path="/" element={<Home />} />

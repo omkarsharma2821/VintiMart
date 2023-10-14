@@ -19,3 +19,20 @@
   background-image: url(bg.jpg);
   background-size: cover;
 }
+.carousel-img{
+  background-size: cover;
+}
+.button:hover{
+  scale: 0.9;
+  transition: all ease 0.2s;
+}
+.error{
+  background-image: url(404.png);
+  background-size: contain;
+  background-size: cover;
+}
+/* .home-bg{
+  background-image: url(f9.png);
+  background-size: cover;
+  height: 70%;
+} */

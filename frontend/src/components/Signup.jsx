@@ -168,7 +168,7 @@ const Signup = () => {
                 </div>
                 <button
                   type="submit"
-                  className="col-6 btn btn-danger w-50 mx-auto mt-0 d-flex justify-content-center"
+                  className="col-6 btn btn-danger w-50 mx-auto mt-0 d-flex justify-content-center button"
                 >
                   Create account
                 </button>

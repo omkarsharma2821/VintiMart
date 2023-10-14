@@ -1,32 +1,21 @@
-import { useFormik } from 'formik';
-import React, { useState } from 'react'
-import toast from 'react-hot-toast';
-import { Navigate } from 'react-router-dom';
-import Swal from 'sweetalert2';
+import { useFormik } from "formik";
+import toast from "react-hot-toast";
+import React, { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import * as Yup from "yup";
 
-
 const furnitureSchema = Yup.object().shape({
-  brand: Yup.string()
-    .min(2, "Too Short!")
-    .required("Required"),
-  material: Yup.string()
-    .min(2, "Too Short!")
-    .required("Required"),
-  price: Yup.string()
-    .required("Required"),
-  image: Yup.string()
-    .required("Required"),
-  yearsold: Yup.string()
-    .required("Required"),
-})
+  brand: Yup.string().min(2, "Too Short!").required("Required"),
+  material: Yup.string().min(2, "Too Short!").required("Required"),
+  price: Yup.string().required("Required"),
+  image: Yup.string().required("Required"),
+  yearsold: Yup.string().required("Required"),
+});
 
-// const AddFurniture = () => {
-//   const navigate = useNavigate
 
 const AddFurniture = () => {
-
-  const [selFile, setSelFile] = useState('');
+  const [selFile, setSelFile] = useState("");
 
   const uploadFile = (e) => {
     const file = e.target.files[0];
@@ -39,20 +28,22 @@ const AddFurniture = () => {
     }).then((res) => {
       if (res.status === 200) {
         console.log("file uploaded");
-        toast.success('File Uploaded')
+        toast.success("File Uploaded");
       }
     });
   };
- 
+  const Furniture = () => {
+    const navigate = useNavigate();
+  }
   const furnitureForm = useFormik({
     initialValues: {
-      brand: '',
-      material: '',
-      price: '',
+      brand: "",
+      material: "",
+      price: "",
       yearsold: 0,
-      image: ""
+      image: "",
     },
-    onSubmit: async (values,{resetForm}) => {
+    onSubmit: async (values, { resetForm }) => {
       values.image = selFile;
       console.log(values);
       resetForm();
@@ -74,13 +65,13 @@ const AddFurniture = () => {
         Navigate("/");
       }
     },
-    // validationSchema: furnitureForm,
-  })
+    validationSchema: furnitureSchema,
+  });
 
   return (
     <div className=" py-5 bg">
       <header className="bg-dark w-50 rounded mx-auto">
-        <div className='container py-3'>
+        <div className="container py-3">
           <h1 className="text-center mb-3 text-white fw-bold">
             Add Furniture to Sell
           </h1>
@@ -103,7 +94,9 @@ const AddFurniture = () => {
                 <label>Brand Name</label>
                 <span
                   style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
-                >{furnitureForm.touched.brand && furnitureForm.errors.brand}</span>
+                >
+                  {furnitureForm.touched.brand && furnitureForm.errors.brand}
+                </span>
               </div>
               <div className="form-floating">
                 <input
@@ -117,7 +110,10 @@ const AddFurniture = () => {
                 <label>Material</label>
                 <span
                   style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
-                >{furnitureForm.touched.material && furnitureForm.errors.material}</span>
+                >
+                  {furnitureForm.touched.material &&
+                    furnitureForm.errors.material}
+                </span>
               </div>
               <div className="form-floating">
                 <input
@@ -131,15 +127,19 @@ const AddFurniture = () => {
                 <label>Set Price</label>
                 <span
                   style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
-                >{furnitureForm.touched.price && furnitureForm.errors.price}</span>
+                >
+                  {furnitureForm.touched.price && furnitureForm.errors.price}
+                </span>
               </div>
               <div class="input-group mb-3">
                 <input type="file" class="form-control" onChange={uploadFile} />
-                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                <label class="input-group-text" for="inputGroupFile02">
+                  Upload
+                </label>
               </div>
               <button
                 type="submit"
-                className="col-6 btn btn-danger w-50 mx-auto mt-5 d-flex justify-content-center"
+                className="col-6 btn btn-danger w-50 mx-auto mt-5 d-flex button justify-content-center"
               >
                 Add Furniture
               </button>
@@ -149,8 +149,7 @@ const AddFurniture = () => {
       </div>
     </div>
     // </div>
-
-  )
-}
+  );
+};
 
 export default AddFurniture;

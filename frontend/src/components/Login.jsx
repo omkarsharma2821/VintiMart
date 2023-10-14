@@ -66,7 +66,7 @@ const Login = () => {
       <div className="d-flex justify-content-center align-items-center vh-100 py-5 bg-body-secondary p-5 bg">
         <div className="card  p-4 w-50">
           <div className="p-4 ">
-            <h2 className="text-center fw-semibold display-6 mb-5 mt-2">
+            <h2 className="text-center fw-semibold display-6 mb-5 mt-2 ">
               {" "}
               Login Here
             </h2>
@@ -104,7 +104,7 @@ const Login = () => {
               </div>
               <button
                 type="submit"
-                className="btn btn-danger mx-auto d-flex justify-content-center w-50 mt-2"
+                className="btn btn-danger mx-auto d-flex justify-content-center w-50 mt-2 button"
               >
                 Submit
               </button>

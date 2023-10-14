@@ -46,7 +46,7 @@ const Contact = () => {
               Get in touch with us
             </h2>
             <h5 className="text-center fw-light">
-              need help / have question ??, we're here for you.
+              need help or have query? - we're here for you.
             </h5>
             {/* <div class="input-group mt-5 w-75 mx-auto"> */}
             {/* <input type="text" class="form-control form-control-lg"> */}
@@ -96,7 +96,7 @@ const Contact = () => {
                 <textarea name="" id="msg" cols={80} rows={3} defaultValue={" "} className="form-control" placeholder="Type your message" />
                 <label>Message</label>
                 </div>
-                <button className="col-6 text-center btn btn-danger w-50 mx-auto d-flex justify-content-center mt-4 mb-0">
+                <button className="col-6 text-center btn btn-danger w-50 button mx-auto d-flex justify-content-center mt-4 mb-0">
                   Submit Query
                 </button>
               </form>

@@ -28,10 +28,10 @@ const diaplayCartItems = () => {
                             <td>{item.price}</td>
                             <td>{item.material}</td>
                             <td> 
-                            <button className="btn btn-danger" onClick={ () => removeItemFromCart(index)}>Remove Item</button>
+                            <button className="btn btn-danger button" onClick={ () => removeItemFromCart(index)}>Remove Item</button>
                             </td>
                             <td> 
-                            <button className="btn btn-primary" onClick={ () => removeItemFromCart(index)}>Buy Item</button>
+                            <button className="btn btn-primary button" onClick={ () => removeItemFromCart(index)}>Buy Item</button>
                             </td>
                         </tr>
                 ))
