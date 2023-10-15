@@ -9,10 +9,6 @@ const SignupSchema = Yup.object().shape({
     .min(2, "Too Short!")
     .max(50, "Too Long!")
     .required("Required"),
-  phone: Yup.string()
-    .min(2, "Too Short!")
-    .max(11, "Too Long!")
-    .required("Required"),
   password: Yup.string()
     .required("Required")
     .matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).*$", "Password is invalid"),
@@ -31,7 +27,8 @@ const Signup = () => {
       name: "",
       email: "",
       password: "",
-      phone: "",
+      confirm: "",
+
     },
     // call back hmko nhi pta kb call hoga lekin aap call hoga sb condition met hogi  jaise isme submit kr  rhe
     onSubmit: async (values, { resetForm }) => {
@@ -85,6 +82,12 @@ const Signup = () => {
             <div className="p-5">
               <h2 className="text-center fw-semibold ">SignUp</h2>
               <form onSubmit={signupForm.handleSubmit} >
+                <span
+                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
+                  {signupForm.touched.name && signupForm.errors.name}
+                </span>
+              <div class="input-group mb-3">
+                <span class="input-group-text"><i class="fa-regular fa-user"></i></span>
                 <div className="form-floating">
                 <input
                   id="name"
@@ -95,12 +98,14 @@ const Signup = () => {
                   placeholder="Username"
                 />
                 <label>Username</label>
-                <span
-                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
-                >
-                  {signupForm.touched.name && signupForm.errors.name}
-                </span>
                 </div>
+                </div>
+                <span
+                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
+                  {signupForm.touched.email && signupForm.errors.email}
+                </span>
+                <div class="input-group mb-3">
+                <span class="input-group-text"><i class="fa-regular fa-user"></i></span>
                 <div className="form-floating">
                 <input
                   id="email"
@@ -111,11 +116,8 @@ const Signup = () => {
                   placeholder="Email"
                 />
                 <label>Email</label>
-                <span
-                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
-                >
-                  {signupForm.touched.email && signupForm.errors.email}
-                </span>
+                </div>
+                  
                 </div>
                 {/* <div className="form-floating">
                 <input
@@ -133,6 +135,12 @@ const Signup = () => {
                   {signupForm.touched.phone && signupForm.errors.phone}
                 </span>
                 </div> */}
+                <span
+                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
+                  {signupForm.touched.password && signupForm.errors.password}
+                </span>
+                <div class="input-group mb-3">
+                <span class="input-group-text"><i class="fa-regular fa-user"></i></span>
                 <div className="form-floating">
                 <input
                   id="password"
@@ -143,11 +151,8 @@ const Signup = () => {
                   placeholder="password"
                 />
                 <label>Password</label>
-                <span
-                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
-                >
-                  {signupForm.touched.password && signupForm.errors.password}
-                </span>
+                
+                </div>
                 </div>
                 <div className="form-floating">
                 <input

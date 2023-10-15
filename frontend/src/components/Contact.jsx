@@ -93,7 +93,11 @@ const Contact = () => {
                 </span>
                 </div>
                 <div className="form-floating">
-                <textarea name="" id="msg" cols={80} rows={3} defaultValue={" "} className="form-control" placeholder="Type your message" />
+                <textarea className="form-control" placeholder="Type your message" 
+                onChange={contactForm.handleChange}
+                  value={contactForm.values.messasge}
+                  id="message"
+                  />
                 <label>Message</label>
                 </div>
                 <button className="col-6 text-center btn btn-danger w-50 button mx-auto d-flex justify-content-center mt-4 mb-0">

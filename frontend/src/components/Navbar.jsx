@@ -23,7 +23,8 @@ const Navbar = ({ mycart }) => {
       {/* <nav className="navbar navbar-expand-lg bg-success text-white"> */}
       <div className="container-fluid">
         <NavLink className="navbar-brand" to={"/"}>
-        VintiMart
+        <span className="px-3">DeVintage</span> 
+          <span className="px-"><i class="fa-solid fa-chair fa-bounce fa-xl"></i></span>
         </NavLink>
         <button
           className="navbar-toggler"
@@ -55,13 +56,14 @@ const Navbar = ({ mycart }) => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/cartpage">
-                My Cart
+              <NavLink className="nav-link" to="/contact">
+                Contact Us
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/contact">
-                Contact Us
+              <NavLink className="nav-link" to="/cartpage">
+                {/* My Cart */}
+                <span className="px-2"><i class="fa-solid fa-cart-shopping fa-xl style={color: #9d9dd8}"></i></span>
               </NavLink>
             </li>
             {/* <li className="nav-item"><h4>Cart Items : {cartitems.length}</h4></li> */}

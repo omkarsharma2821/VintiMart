@@ -31,15 +31,15 @@ const BrowseFurniture = () => {
           Discover Your Style
           </h1>
             <h5 className='text-white text-center mb-4 '>Home Decor for Sale - Place Where Comfort Meets Elegance</h5>
-            <div className='d-flex'>
+            <div className='input-group  d-flex mx-auto w-50'>
           <input
             type="text"
-            className='form-control w-75 m-auto'
+            className='form-control m-auto'
             onChange={searchProduct}
             placeholder='Search in VintiMart....'
           />
-            {/* <button><i class="fa-solid fa-magnifying-glass"></i></button> */}
-            </div>
+          <button className="btn btn-primary"><i class="fa-solid fa-magnifying-glass fa-beat fa-lg"></i></button>
+          </div>
         </div>
       </header>
       <div className="row mt-4">
@@ -64,15 +64,14 @@ const BrowseFurniture = () => {
             <div className="row">
               {productsArray.map((product) => (
                 <div className="col-md-3 mb-4">
-                  <div className="card" style={{ overflow: "hidden" }}>
+                  <div className="card " style={{ overflow: "hidden" }}>
                     <img src={product.image} alt="" className="my-card-img" />
                     <div className="card-body">
                       <p className="text-muted">
                         {product.sponsored ? "sponsored" : ""}
                       </p>
-                      {/* <h6>{product.model}</h6> */}
-                      <h6>{product.brand}</h6>
-                      <h6>{product.price}</h6>
+                      <h5><i className="fa-solid fa-rupee-sign fa-fade  px-2" style={{color: "#000000"}}></i>{product.price}</h5>
+                      <h5><i class="fa-solid fa-tag px-1"></i>{product.brand}</h5>
                       <button onClick={() => {addItemToCart(product)}} className="btn btn-primary button">Add to Cart</button>
                       <button onClick={() => {addItemToCart(product)}} className="btn btn-primary mx-3 button">Buy Now</button>
                     </div>

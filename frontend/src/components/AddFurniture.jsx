@@ -9,8 +9,8 @@ const furnitureSchema = Yup.object().shape({
   brand: Yup.string().min(2, "Too Short!").required("Required"),
   material: Yup.string().min(2, "Too Short!").required("Required"),
   price: Yup.string().required("Required"),
-  image: Yup.string().required("Required"),
-  yearsold: Yup.string().required("Required"),
+  // image: Yup.string().required("Required"),
+  // yearsold: Yup.string().required("Required"),
 });
 
 
