@@ -82,6 +82,11 @@ const AddFurniture = () => {
         <div className="card w-50 col-6 col-md-6 ">
           <div className="p-5">
             <form onSubmit={furnitureForm.handleSubmit}>
+            <span
+                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
+                >
+                  {furnitureForm.touched.brand && furnitureForm.errors.brand}
+                </span>
               <div className="form-floating">
                 <input
                   id="brand"
@@ -92,12 +97,14 @@ const AddFurniture = () => {
                   placeholder="brandname"
                 />
                 <label>Brand Name</label>
-                <span
+                
+              </div>
+              <span
                   style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
                 >
-                  {furnitureForm.touched.brand && furnitureForm.errors.brand}
+                  {furnitureForm.touched.material &&
+                    furnitureForm.errors.material}
                 </span>
-              </div>
               <div className="form-floating">
                 <input
                   id="material"
@@ -108,14 +115,14 @@ const AddFurniture = () => {
                   placeholder="material"
                 />
                 <label>Material</label>
-                <span
+                
+              </div>
+              <span
                   style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
                 >
-                  {furnitureForm.touched.material &&
-                    furnitureForm.errors.material}
+                  {furnitureForm.touched.price && furnitureForm.errors.price}
                 </span>
-              </div>
-              <div className="form-floating">
+              <div className="form-floating mb-3">
                 <input
                   id="price"
                   onChange={furnitureForm.handleChange}
@@ -125,11 +132,7 @@ const AddFurniture = () => {
                   placeholder="price"
                 />
                 <label>Set Price</label>
-                <span
-                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
-                >
-                  {furnitureForm.touched.price && furnitureForm.errors.price}
-                </span>
+                
               </div>
               <div class="input-group mb-3">
                 <input type="file" class="form-control" onChange={uploadFile} />

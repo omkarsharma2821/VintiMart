@@ -60,6 +60,12 @@ const Contact = () => {
             <div className="p-5 ">
               <h2 className="text-center mb-3 fw-semibold">Contact Us</h2>
               <form onSubmit={contactForm.handleSubmit}>
+              <span
+                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
+                  {contactForm.errors.name}
+                </span>
+                <div className="input-group">
+                  <span className="input-group-text"><i className="fa-solid fa-user"></i></span>
                 <div className="form-floating">
                 <input
                   id="name"
@@ -70,12 +76,15 @@ const Contact = () => {
                   placeholder="Username"
                 />
                 <label>Username</label>
+                </div>
+                </div>
                 <span
                   style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
                 >
-                  {contactForm.errors.name}
+                  {contactForm.errors.email}
                 </span>
-                </div>
+                <div className="input-group">
+                  <span className="input-group-text"><i className="fa-solid fa-lock"></i></span>
                 <div className="form-floating">
                 <input
                   id="email"
@@ -86,18 +95,18 @@ const Contact = () => {
                   placeholder="Email"
                 />
                 <label>Email address</label>
-                <span
-                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
-                >
-                  {contactForm.errors.email}
-                </span>
                 </div>
+                </div>
+                <span style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
+                  {contactForm.errors.messasge}
+                </span>
                 <div className="form-floating">
-                <textarea className="form-control" placeholder="Type your message" 
+                <textarea 
+                id="message"
+                className="form-control" placeholder="Type your message" 
                 onChange={contactForm.handleChange}
-                  value={contactForm.values.messasge}
-                  id="message"
-                  />
+                value={contactForm.values.messasge}
+                />
                 <label>Message</label>
                 </div>
                 <button className="col-6 text-center btn btn-danger w-50 button mx-auto d-flex justify-content-center mt-4 mb-0">

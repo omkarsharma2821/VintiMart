@@ -71,8 +71,11 @@ const Login = () => {
               Login Here
             </h2>
             <form onSubmit={loginForm.handleSubmit}>
-              <div className="input-group">
-                {/* <span className="input-group-text"><i class="fa-regular fa-user"></i></span> */}
+            <span style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
+                {loginForm.errors.email}
+              </span>
+              <div className="input-group ">
+                <span className="input-group-text"><i class="fa-solid fa-user "></i></span>
                 <div className="form-floating">
               <input
                 id="email"
@@ -83,11 +86,14 @@ const Login = () => {
                 placeholder="Email address"
               />
               <label for="email">Email address</label>
+              
+              </div>
+              </div>
               <span style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
-                {loginForm.errors.email}
+                {loginForm.errors.password}
               </span>
-              </div>
-              </div>
+              <div className="input-group">
+                <span className="input-group-text"> <i className="fa-solid fa-lock"></i></span>
               <div className="form-floating">
               <input
                 id="password"
@@ -98,9 +104,7 @@ const Login = () => {
                 placeholder="Enter your password"
               />
               <label for='password'>Password</label>
-              <span style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
-                {loginForm.errors.password}
-              </span>
+              </div>
               </div>
               <button
                 type="submit"

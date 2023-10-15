@@ -86,8 +86,8 @@ const Signup = () => {
                   style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
                   {signupForm.touched.name && signupForm.errors.name}
                 </span>
-              <div class="input-group mb-3">
-                <span class="input-group-text"><i class="fa-regular fa-user"></i></span>
+              <div class="input-group">
+                <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
                 <div className="form-floating">
                 <input
                   id="name"
@@ -104,8 +104,8 @@ const Signup = () => {
                   style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
                   {signupForm.touched.email && signupForm.errors.email}
                 </span>
-                <div class="input-group mb-3">
-                <span class="input-group-text"><i class="fa-regular fa-user"></i></span>
+                <div class="input-group">
+                <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
                 <div className="form-floating">
                 <input
                   id="email"
@@ -139,8 +139,8 @@ const Signup = () => {
                   style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
                   {signupForm.touched.password && signupForm.errors.password}
                 </span>
-                <div class="input-group mb-3">
-                <span class="input-group-text"><i class="fa-regular fa-user"></i></span>
+                <div class="input-group">
+                <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
                 <div className="form-floating">
                 <input
                   id="password"
@@ -154,9 +154,17 @@ const Signup = () => {
                 
                 </div>
                 </div>
+                <span
+                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
+                >
+                  {signupForm.touched.confirm &&
+                    signupForm.errors.confirm}
+                </span>
+                <div className="input-group mb-3">
+                <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
                 <div className="form-floating">
                 <input
-                  id="confirm_password"
+                  id="confirm"
                   onChange={signupForm.handleChange}
                   value={signupForm.values.confirmpassword}
                   type="password"
@@ -164,12 +172,7 @@ const Signup = () => {
                   placeholder="password"
                 />
                 <label>Confirm Password</label>
-                <span
-                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
-                >
-                  {signupForm.touched.confirmpassword &&
-                    signupForm.errors.confirmpassword}
-                </span>
+                </div>
                 </div>
                 <button
                   type="submit"
