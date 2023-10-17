@@ -31,8 +31,11 @@
   background-size: contain;
   background-size: cover;
 }
-/* .home-bg{
-  background-image: url(f9.png);
+.card-bg{
+  background-image: url(card-bg.jpg);
   background-size: cover;
-  height: 70%;
-} */
+}
+.card-bg2{
+  background-image: url(card-bg2.jpg);
+  background-size: cover;
+}

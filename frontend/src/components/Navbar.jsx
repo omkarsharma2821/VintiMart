@@ -61,6 +61,11 @@ const Navbar = ({ mycart }) => {
               </NavLink>
             </li>
             <li className="nav-item">
+              <NavLink className="nav-link" to="/drop">
+                Dropzone
+              </NavLink>
+            </li>
+            <li className="nav-item">
               <NavLink className="nav-link" to="/cartpage">
                 {/* My Cart */}
                 <span className="px-2"><i class="fa-solid fa-cart-shopping fa-xl style={color: #9d9dd8}"></i></span>
