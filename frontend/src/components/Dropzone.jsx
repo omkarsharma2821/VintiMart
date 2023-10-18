@@ -10,7 +10,7 @@ const Dropzone = ({ className }) => {
       setFiles(previousFiles => [
         ...previousFiles,
         ...acceptedFiles.map(file =>
-          Object.assign(file, { preview: URL.createObjectURL(file) })
+          Object.assign(file, { preview: URL.createObjectURL(file) }) 
         )
       ])
     }
