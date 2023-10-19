@@ -123,7 +123,7 @@ const Dropzone = ({ className }) => {
         <h3 className='title text-lg font-semibold text-neutral-600 mt-24 border-b pb-3'>
           Rejected Files
         </h3>
-        <ul className='mt-6 flex flex-col'>
+        <ul className='mt-6 flex flex-col'> 
           {rejected.map(({ file, errors }) => (
             <li key={file.name} className='flex items-start justify-between'>
               <div>
