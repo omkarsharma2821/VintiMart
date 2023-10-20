@@ -1,6 +1,6 @@
 import { useFormik } from "formik";
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import * as Yup from "yup";
 import useAppContext from "../AppContext";
@@ -13,7 +13,8 @@ const LoginSchema = Yup.object().shape({
 
   email: Yup.string().email("Invalid email").required("Required"),
 });
-const Login = () => {
+const Login = () => {  
+  const navigate = useNavigate();
   const { setLoggedIn } = useAppContext();
 
   const loginForm = useFormik({
@@ -38,6 +39,7 @@ const Login = () => {
           icon: "success",
           title: "Login success",
         });
+        navigate("/");
         setLoggedIn(true);
         const data = await res.json();
         console.log(data);

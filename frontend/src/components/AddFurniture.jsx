@@ -71,18 +71,18 @@ const AddFurniture = () => {
   return (
     <div className="bg">
       <div className="container py-5">
-      <div className="row justify-content-center">
-        <div className="col-6 px-0">
-      <header className="bg-dark w-100">
+        <div className="d-flex justify-content-center">
+      <header className="bg-dark w-50 card d-flex justify-content-center">
         <div className="py-3 px-3">
           <h1 className="text-center mb-3 text-white fw-bold">
             Add Furniture to Sell
           </h1>
         </div>
       </header>
+      </div>
       {/* <div className="img"> */}
-      <div className="vh-50">
-        <div className="card-bg2 w-100 col-6 col-md-6 ">
+      <div className="vh-50 d-flex justify-content-center">
+        <div className="w-50 card col-6 col-md-6 ">
           <div className="p-4">
             <form onSubmit={furnitureForm.handleSubmit}>
             <span
@@ -153,91 +153,7 @@ const AddFurniture = () => {
           </div>
         </div>
       </div>
-        </div>
-        <div className="col-6 px-0">
-      <header className="bg-dark w-100">
-        <div className="py-3 px-3">
-          <h1 className="text-center mb-3 text-white fw-bold">
-            Add Furniture to Sell
-          </h1>
-        </div>
-      </header>
-      {/* <div className="img"> */}
-      <div className="vh-50">
-        <div className="card-bg w-100 col-6 col-md-6 ">
-          <div className="p-4">
-            <form onSubmit={furnitureForm.handleSubmit}>
-            <span
-                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
-                >
-                  {furnitureForm.touched.brand && furnitureForm.errors.brand}
-                </span>
-              <div className="form-floating">
-                <input
-                  id="brand"
-                  onChange={furnitureForm.handleChange}
-                  value={furnitureForm.values.brand}
-                  type="text"
-                  className="form-control"
-                  placeholder="brandname"
-                />
-                <label>Brand Name</label>
-                
-              </div>
-              <span
-                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
-                >
-                  {furnitureForm.touched.material &&
-                    furnitureForm.errors.material}
-                </span>
-              <div className="form-floating">
-                <input
-                  id="material"
-                  onChange={furnitureForm.handleChange}
-                  value={furnitureForm.values.material}
-                  type="text"
-                  className="form-control"
-                  placeholder="material"
-                />
-                <label>Material</label>
-                
-              </div>
-              <span
-                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
-                >
-                  {furnitureForm.touched.price && furnitureForm.errors.price}
-                </span>
-              <div className="form-floating mb-3">
-                <input
-                  id="price"
-                  onChange={furnitureForm.handleChange}
-                  value={furnitureForm.values.price}
-                  type="number"
-                  className="form-control"
-                  placeholder="price"
-                />
-                <label>Set Price</label>
-                
-              </div>
-              <div class="input-group mb-3">
-                <input type="file" class="form-control" onChange={uploadFile} />
-                <label class="input-group-text" for="inputGroupFile02">
-                  Upload
-                </label>
-              </div>
-              <button
-                type="submit"
-                className="col-6 btn btn-danger w-50 mx-auto mt-5 d-flex button justify-content-center"
-              >
-                Add Furniture
-              </button>
-            </form>
-          </div>
-        </div>
       </div>
-        </div>
-      </div>
-    </div>
     </div>
     // {/* </div> */}
   );

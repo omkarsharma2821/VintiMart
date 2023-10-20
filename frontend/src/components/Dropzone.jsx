@@ -1,4 +1,4 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import { useCallback, useEffect, useState } from 'react'
 import { useDropzone } from 'react-dropzone'
 import { ArrowUpTrayIcon, XMarkIcon } from '@heroicons/react/24/solid'
@@ -95,7 +95,7 @@ const Dropzone = ({ className }) => {
         <ul className='mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-10'>
           {files.map(file => (
             <li key={file.name} className='relative h-32 rounded-md shadow-lg'>
-              <Image
+              <img
                 src={file.preview}
                 alt={file.name}
                 width={100}

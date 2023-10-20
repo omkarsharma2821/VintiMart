@@ -23,7 +23,7 @@ const Navbar = ({ mycart }) => {
       {/* <nav className="navbar navbar-expand-lg bg-success text-white"> */}
       <div className="container-fluid">
         <NavLink className="navbar-brand" to={"/"}>
-        <span className="px-3">DeVintage</span> 
+        <span className="px-3">VintiMart</span> 
           <span className="px-"><i class="fa-solid fa-chair fa-bounce fa-xl"></i></span>
         </NavLink>
         <button
