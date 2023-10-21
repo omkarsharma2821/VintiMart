@@ -8,7 +8,7 @@ const Home = () => {
 
   return (
     <>
-    <div className=" vh-100 home-bg ">
+    <div className="vh-100 home-bg ">
       {/* <img src="" style={myStyle} alt="" /> */}
     </div>
     <div>
@@ -22,7 +22,7 @@ const Home = () => {
               src="images/G.gif"
               alt=""
             />
-            <button className="btn btn-primary mt-3 mx-4">Add to Cart</button>
+            <button className="btn btn-primary mt-3 mx-4">Home Decor</button>
             <button className="btn btn-primary mt-3 mx-4">Buy Now</button>
             <h4 className="text-center mt-4" />
         </div>
@@ -34,7 +34,7 @@ const Home = () => {
               src="images/G1.gif"
               alt=""
             />
-            <button className="btn btn-primary mt-3 mx-4">Add to Cart</button>
+            <button className="btn btn-primary mt-3 mx-4">Classical Chairs</button>
             <button className="btn btn-primary mt-3 mx-4">Buy Now</button>
             <h4 className="text-center mt-4" />
         </div>
@@ -46,7 +46,7 @@ const Home = () => {
               src="images/G2.gif"
               alt=""
             />
-            <button className="btn btn-primary mt-3 mx-4">Add to Cart</button>
+            <button className="btn btn-primary mt-3 mx-4">Study Table</button>
             <button className="btn btn-primary mt-3 mx-4">Buy Now</button>
             <h4 className="text-center mt-4" />
         </div>
@@ -58,7 +58,7 @@ const Home = () => {
               src="images/G3.gif"
               alt=""
             />
-            <button className="btn btn-primary mt-3 mx-4">Add to Cart</button>
+            <button className="btn btn-primary mt-3 mx-4">Modern Furniture</button>
             <button className="btn btn-primary mt-3 mx-4">Buy Now</button>
             <h4 className="text-center mt-4" />
         </div>

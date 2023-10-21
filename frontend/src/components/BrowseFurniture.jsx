@@ -1,28 +1,45 @@
-import React, { useState } from 'react'
-import productData from "./DummyData"
+import React, { useEffect, useState } from 'react'
+// import productData from "./DummyData"
 import useCartContext from '../CartContext';
 
 const BrowseFurniture = () => {
 
-  const [productsArray, setProductsArray] = useState(productData);
+  const [productsArray, setProductsArray] = useState([]);
+  const [FurnitureList, setFurnitureList] = useState([]);
 
   const {addItemToCart} = useCartContext();
+
+  const getFurnitureData = async () => {
+    const res = await fetch('http://localhost:5000/furniture/getall');
+    console.log(res.status);
+    const data = await res.json();
+    console.table(data);
+    setFurnitureList(data);
+    setProductsArray(data)
+}
+
+useEffect(() => {
+  getFurnitureData()
+}, [])
+
 
   const brands = ["pepperfry", "urban ladder", "godrej", "durian","wood mount", "royal oak","zuari", "damro"];
   const searchProduct = (e) => {
     const search = e.target.value;
-    let filteredData = productData.filter((product) => {
-      return product.model.toLowerCase().includes(search.toLowerCase());
+    let filteredData = FurnitureList.filter((product) => {
+      return product.title.toLowerCase().includes(search.toLowerCase());
     });
     setProductsArray(filteredData);
   };
+
   const filterBrand = (e) => {
     const search = e.target.value;
-    let filteredData = productData.filter((product) => {
+    let filteredData = FurnitureList.filter((product) => {
       return product.brand === search;
     });
     setProductsArray(filteredData);
   };
+
   return (
     <div>
       <header className="bg-dark">
@@ -65,7 +82,7 @@ const BrowseFurniture = () => {
               {productsArray.map((product) => (
                 <div className="col-md-3 mb-4">
                   <div className="card " style={{ overflow: "hidden" }}>
-                    <img src={product.image} alt="" className="my-card-img" />
+                    <img src={'http://localhost:5000/'+product.image} alt="" className="my-card-img" />
                     <div className="card-body">
                       <p className="text-muted">
                         {product.sponsored ? "sponsored" : ""}

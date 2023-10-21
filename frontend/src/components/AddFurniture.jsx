@@ -16,6 +16,7 @@ const furnitureSchema = Yup.object().shape({
 
 const AddFurniture = () => {
   const [selFile, setSelFile] = useState("");
+  const navigate = useNavigate();
 
   const uploadFile = (e) => {
     const file = e.target.files[0];
@@ -32,12 +33,11 @@ const AddFurniture = () => {
       }
     });
   };
-  const Furniture = () => {
-    const navigate = useNavigate();
-  }
+
   const furnitureForm = useFormik({
     initialValues: {
       brand: "",
+      title: "",
       material: "",
       price: "",
       yearsold: 0,
@@ -46,7 +46,6 @@ const AddFurniture = () => {
     onSubmit: async (values, { resetForm }) => {
       values.image = selFile;
       console.log(values);
-      resetForm();
 
       const res = await fetch("http://localhost:5000/furniture/add", {
         method: "POST",
@@ -55,14 +54,16 @@ const AddFurniture = () => {
           "Content-Type": "application/json",
         },
       });
-      console.log(res);
+      console.log(res.status);
       if (res.status === 200) {
         Swal.fire({
           icon: "success",
           title: "Item Added Successfully",
           text: "Our Team will contact you soon",
         });
-        Navigate("/");
+        values.image = "";
+        resetForm();
+        navigate("/");
       }
     },
     validationSchema: furnitureSchema,
@@ -72,87 +73,104 @@ const AddFurniture = () => {
     <div className="bg">
       <div className="container py-5">
         <div className="d-flex justify-content-center">
-      <header className="bg-dark w-50 card d-flex justify-content-center">
-        <div className="py-3 px-3">
-          <h1 className="text-center mb-3 text-white fw-bold">
-            Add Furniture to Sell
-          </h1>
+          <header className="bg-dark w-50 card d-flex justify-content-center">
+            <div className="py-3 px-3">
+              <h1 className="text-center mb-3 text-white fw-bold">
+                Add Furniture to Sell
+              </h1>
+            </div>
+          </header>
         </div>
-      </header>
-      </div>
-      {/* <div className="img"> */}
-      <div className="vh-50 d-flex justify-content-center">
-        <div className="w-50 card col-6 col-md-6 ">
-          <div className="p-4">
-            <form onSubmit={furnitureForm.handleSubmit}>
-            <span
+        {/* <div className="img"> */}
+        <div className="vh-50 d-flex justify-content-center">
+          <div className="w-50 card col-6 col-md-6 ">
+            <div className="p-4">
+              <form onSubmit={furnitureForm.handleSubmit}>
+                <span
                   style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
                 >
                   {furnitureForm.touched.brand && furnitureForm.errors.brand}
                 </span>
-              <div className="form-floating">
-                <input
-                  id="brand"
-                  onChange={furnitureForm.handleChange}
-                  value={furnitureForm.values.brand}
-                  type="text"
-                  className="form-control"
-                  placeholder="brandname"
-                />
-                <label>Brand Name</label>
-                
-              </div>
-              <span
+                <div className="form-floating">
+                  <input
+                    id="brand"
+                    onChange={furnitureForm.handleChange}
+                    value={furnitureForm.values.brand}
+                    type="text"
+                    className="form-control"
+                    placeholder="brandname"
+                  />
+                  <label>Brand Name</label>
+
+                </div>
+                <span
+                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
+                >
+                  {furnitureForm.touched.brand && furnitureForm.errors.brand}
+                </span>
+                <div className="form-floating">
+                  <input
+                    id="title"
+                    onChange={furnitureForm.handleChange}
+                    value={furnitureForm.values.title}
+                    type="text"
+                    className="form-control"
+                    placeholder="titlename"
+                  />
+                  <label>Title</label>
+
+                </div>
+                <span
                   style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
                 >
                   {furnitureForm.touched.material &&
                     furnitureForm.errors.material}
                 </span>
-              <div className="form-floating">
-                <input
-                  id="material"
-                  onChange={furnitureForm.handleChange}
-                  value={furnitureForm.values.material}
-                  type="text"
-                  className="form-control"
-                  placeholder="material"
-                />
-                <label>Material</label>
-                
-              </div>
-              <span
+                <div className="form-floating">
+                  <input
+                    id="material"
+                    onChange={furnitureForm.handleChange}
+                    value={furnitureForm.values.material}
+                    type="text"
+                    className="form-control"
+                    placeholder="material"
+                  />
+                  <label>Material</label>
+
+                </div>
+                <span
                   style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
                 >
                   {furnitureForm.touched.price && furnitureForm.errors.price}
                 </span>
-              <div className="form-floating mb-3">
-                <input
-                  id="price"
-                  onChange={furnitureForm.handleChange}
-                  value={furnitureForm.values.price}
-                  type="number"
-                  className="form-control"
-                  placeholder="price"
-                />
-                <label>Set Price</label>
-                
-              </div>
-              <div class="input-group mb-3">
-                <input type="file" class="form-control" onChange={uploadFile} />
-                <label class="input-group-text" for="inputGroupFile02">
+                <div className="form-floating mb-3">
+                  <input
+                    id="price"
+                    onChange={furnitureForm.handleChange}
+                    value={furnitureForm.values.price}
+                    type="number"
+                    className="form-control"
+                    placeholder="price"
+                  />
+                  <label>Set Price</label>
+
+                </div>
+                <div class="input-group mb-3">
+                  <input type="file" class="form-control" onChange={uploadFile} />
+                  {/* <label class="input-group-text" for="inputGroupFile02">
                   Upload
-                </label>
-              </div>
-              <button
-                type="submit"
-                className="col-6 btn btn-danger w-50 mx-auto mt-5 d-flex button justify-content-center"
-              >
-                Add Furniture
-              </button>
-            </form>
+                </label> */}
+                </div>
+                <button
+                  type="submit"
+                  className="col-6 btn btn-danger w-50 mx-auto mt-5 d-flex button justify-content-center"
+                >
+                  Add Furniture
+                </button>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </div>
     // {/* </div> */}
