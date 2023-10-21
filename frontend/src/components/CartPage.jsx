@@ -34,7 +34,7 @@ const CartPage = () => {
                     <th>Brand</th>
                     <th>Price</th>
                     <th>Material</th>
-                    <th colSpan={2} className='text-center'>Action</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -42,16 +42,13 @@ const CartPage = () => {
                     cartitems.map((item, index) => (
                         <tr>
                             <td>
-                                <img className="cart-img" height={50} src={item.image} alt="" />
+                            <img className="" height={50} src={item.image} alt="" />
                             </td>
                             <td>{item.brand}</td>
                             <td>{item.price}</td>
                             <td>{item.material}</td>
                             <td>
                                 <button className="btn btn-danger button" onClick={() => removeItemFromCart(index)}>Remove Item</button>
-                            </td>
-                            <td>
-                                <button className="btn btn-primary button" onClick={() => removeItemFromCart(index)}>Buy Item</button>
                             </td>
                         </tr>
                     ))
@@ -64,10 +61,9 @@ const CartPage = () => {
             <div className="container py-5">
                 {diaplayCartItems()}
 
-                <label htmlFor="">Delivery Address</label>
-                <textarea ref={addressRef} className="form-control" name="" id=""></textarea>
-
-                <button className="btn btn-success" onClick={saveOrder}>Book Order</button>
+                <label htmlFor="">Add Delivery Address</label>
+                <textarea ref={addressRef} className="form-control mt-2" name="" id=""></textarea>
+                <button className="btn btn-success mt-2" onClick={saveOrder}>Book Order</button>
             </div>
         </div>
     )
