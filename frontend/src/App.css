@@ -28,14 +28,14 @@
 }
 .error{
   background-image: url(404.png);
-  background-size: contain;
   background-size: cover;
 }
-.card-bg{
-  background-image: url(card-bg.jpg);
+.home-bg{
+  background-image: url(homebg.png);
   background-size: cover;
+  background-position: center;
 }
-.card-bg2{
-  background-image: url(card-bg2.jpg);
+.homecart{
+  object-fit: cover;
   background-size: cover;
 }
