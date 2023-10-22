@@ -3,8 +3,10 @@ import useCartContext from "../CartContext";
 import { useState } from "react";
 
 const CartPage = () => {
-    const { cartitems, removeItemFromCart } = useCartContext();
+    const { cartitems, removeItemFromCart, setCartItems } = useCartContext();
     const addressRef = useRef(null);
+
+    console.log(cartitems);    
 
     const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')));
 
@@ -16,9 +18,13 @@ const CartPage = () => {
                 user: currentUser._id,
                 address: addressRef.current.value,
                 createdAt: new Date()
-            })
+            }),
+            headers: {
+                'Content-Type' : 'application/json'
+            }
         });
         console.log(res.status);
+        setCartItems([])
         // alert
     }
 
@@ -26,7 +32,7 @@ const CartPage = () => {
         if (!cartitems.length) return <h1 className="text-center display-4 text-muted">
             No Items in Cart
         </h1>
-        return <table className="table table-bordered table align-middle text-center table-hover bg">
+        return <table className="table table-bordered table align-middle text-center table-hover bg table-warning   ">
             <thead className="table-primary ">
 
                 <tr>
@@ -42,7 +48,7 @@ const CartPage = () => {
                     cartitems.map((item, index) => (
                         <tr>
                             <td>
-                            <img className="" height={50} src={item.image} alt="" />
+                            <img height={50} src={"http://localhost:5000/"+item.image} alt="" />
                             </td>
                             <td>{item.brand}</td>
                             <td>{item.price}</td>
@@ -61,9 +67,10 @@ const CartPage = () => {
             <div className="container py-5">
                 {diaplayCartItems()}
 
-                <label htmlFor="">Add Delivery Address</label>
+                {/* <label htmlFor="">Add Delivery Address</label> */}
+                <h4>Add Delivery Address</h4>
                 <textarea ref={addressRef} className="form-control mt-2" name="" id=""></textarea>
-                <button className="btn btn-success mt-2" onClick={saveOrder}>Book Order</button>
+                <button className="btn btn-success mt-2 button" onClick={saveOrder}>Book Order</button>
             </div>
         </div>
     )
