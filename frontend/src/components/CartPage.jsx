@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import useCartContext from "../CartContext";
 import { useState } from "react";
+import Swal from "sweetalert2";
+import { Navigate } from "react-router-dom";
 
 const CartPage = () => {
     const { cartitems, removeItemFromCart, setCartItems } = useCartContext();
@@ -26,6 +28,15 @@ const CartPage = () => {
         console.log(res.status);
         setCartItems([])
         // alert
+    if (res.status === 200) {
+      Swal.fire({
+        icon: "success",
+        title: "Order Booked Successfully",
+        text: "Happy Shopping",
+      });
+      // resetForm();
+      Navigate("/browsefurniture");
+    }
     }
 
     const diaplayCartItems = () => {

@@ -30,24 +30,22 @@ const ViewOrders = () => {
       getfurnitureData()
       toast.success("Furniture Deleteed successfully");
     }
-
-
   }
 
   return (
     <div className='vh-100 bg-body-secondary'>
       <div className="container py-4">
-        <h1 className='text-center mb-4 text-bold'>Manage Orders</h1>
+        <h1 className='text-center mb-4 text-bold'>Track Orders</h1>
 
         <table className='table table-bordered table align-middle text-center table-hover table-warning'>
           <thead>
             <tr>
               <th>S.No.</th>
               <th>Ordered On</th>
-              <th>Items</th>
+              <th>Details</th>
               <th>Delivery Address</th>
-              <th>Ordered By</th>
-              <th colSpan={2} className='text-center'>Action</th>
+              <th>Remove Item</th>
+              {/* <th colSpan={2} className='text-center'>Action</th> */}
             </tr>
           </thead>
           <tbody>
@@ -70,9 +68,9 @@ const ViewOrders = () => {
                   </td>
                   <td>{furniture.address}</td>
                   {/* <td>{furniture.user.name}</td> */}
-                  <td>
+                  {/* <td>
                     <Link to={"/updatefurniture/" + furniture._id} className='btn btn-primary button'>Edit</Link>
-                  </td>
+                  </td> */}
                   <td>
                     <button onClick={() => deletefurniture(furniture._id)}
                       className='btn btn-danger button'>Delete</button>
