@@ -37,7 +37,7 @@ useEffect(() => {
     let filteredData = FurnitureList.filter((product) => {
       return product.brand === search;
     });
-    setProductsArray(filteredData);
+    setProductsArray(filteredData); 
   };
 
   return (
