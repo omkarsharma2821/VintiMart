@@ -34,7 +34,7 @@ const CartPage = () => {
         title: "Order Booked Successfully",
         text: "Happy Shopping",
       });
-      // resetForm();
+      // resetForm(); 
       Navigate("/browsefurniture");
     }
     }
