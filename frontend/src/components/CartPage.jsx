@@ -32,7 +32,7 @@ const CartPage = () => {
       Swal.fire({
         icon: "success",
         title: "Order Booked Successfully",
-        text: "Happy Shopping",
+        text: "Happy Shopping", 
       });
       // resetForm();  
       Navigate("/browsefurniture");
