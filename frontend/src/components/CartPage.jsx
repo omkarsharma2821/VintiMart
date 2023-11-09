@@ -2,11 +2,13 @@ import { useRef } from "react";
 import useCartContext from "../CartContext";
 import { useState } from "react";
 import Swal from "sweetalert2";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const CartPage = () => {
     const { cartitems, removeItemFromCart, setCartItems } = useCartContext();
     const addressRef = useRef(null);
+
+    const navigate = useNavigate();
 
     console.log(cartitems);    
 
@@ -35,7 +37,7 @@ const CartPage = () => {
         text: "Happy Shopping", 
       });
       // resetForm();      
-      Navigate("/browsefurniture");
+      navigate("/browsefurniture");
     }
     }
 

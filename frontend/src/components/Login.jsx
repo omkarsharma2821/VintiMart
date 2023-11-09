@@ -4,6 +4,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import * as Yup from "yup";
 import useAppContext from "../AppContext";
+import Paper from '@mui/material/Paper';
 
 const LoginSchema = Yup.object().shape({
   password: Yup.string()
@@ -64,12 +65,11 @@ const Login = () => {
   });
 
   return (
-    <>
-      <div className="d-flex justify-content-center align-items-center vh-100 py-5 bg-body-secondary p-5 bg">
+    <Paper elevation={24}>
+      <div className="d-flex justify-content-center align-items-center vh-100 py-5 p-5 bg">
         <div className="card  p-4 w-50">
           <div className="p-4 ">
             <h2 className="text-center fw-semibold display-6 mb-5 mt-2 ">
-              {" "}
               Login Here
             </h2>
             <form onSubmit={loginForm.handleSubmit}>
@@ -124,7 +124,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-    </>
+    </Paper>
   );
 };
 
