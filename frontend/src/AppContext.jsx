@@ -13,7 +13,7 @@ export const AppProvider = ({children}) => {
     const [currentUser, setCurrentUser] = useState(
         JSON.parse(sessionStorage.getItem('user')) //JSON.parse convert json into jsx 
     )
-    const [loggedIn, setLoggedIn] = useState(false);
+    const [loggedIn, setLoggedIn] = useState(currentUser!==null);
 
     const logout = () =>{
         setLoggedIn(false);
