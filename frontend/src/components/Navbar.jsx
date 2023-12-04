@@ -60,11 +60,11 @@ const Navbar = ({ mycart }) => {
                 Contact Us
               </NavLink>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <NavLink className="nav-link" to="/drop">
                 Dropzone
               </NavLink>
-            </li>
+            </li> */}
             <li className="nav-item">
               <NavLink className="nav-link" to="/view">
                 View Order
