@@ -65,13 +65,19 @@ const Login = () => {
   });
 
   return (
-    <Paper elevation={24}>
-      <div className="d-flex justify-content-center align-items-center vh-100 py-5 p-5 bg">
-        <div className="card  p-4 w-50">
-          <div className="p-4 ">
-            <h2 className="text-center fw-semibold display-6 mb-5 mt-2 ">
-              Login Here
-            </h2>
+      <div className="bg vh-100 p-5">
+      <div className="d-flex justify-content-center">
+          <header className="bg-dark w-50 card d-flex justify-content-center">
+          <div className="p-3">
+            <h1 className="text-center mb-3 text-white fw-bold display-2">
+              Begin with Login
+            </h1>
+          </div>
+        </header>
+        </div>
+        <div className="d-flex justify-content-center">
+        <div className="card w-50 col-6 col-md-6 p-2 py-0">
+          <div className="p-5">
             <form onSubmit={loginForm.handleSubmit}>
             <span style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
                 {loginForm.errors.email}
@@ -110,21 +116,21 @@ const Login = () => {
               </div>
               <button
                 type="submit"
-                className="btn btn-danger mx-auto d-flex justify-content-center w-50 mt-2 button"
+                className="btn btn-success mx-auto d-flex justify-content-center w-100 mt-4 mb-2 p-1 button"
               >
-                Submit
+                <h3>Submit</h3>
               </button>
-              <span className="d-flex justify-content-center">
+              <h4 className="d-flex justify-content-center">
                 Dont have an account -
                 <span>
                   <NavLink to="/signup">create account</NavLink>
                 </span>
-              </span>
+              </h4>
             </form>
           </div>
         </div>
       </div>
-    </Paper>
+      </div>
   );
 };
 

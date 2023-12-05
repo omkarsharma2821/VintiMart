@@ -70,21 +70,20 @@ const AddFurniture = () => {
   });
 
   return (
-    <div className="bg">
-      <div className="container py-5">
+    <div className="bg vh-100 p-4">
         <div className="d-flex justify-content-center">
           <header className="bg-dark w-50 card d-flex justify-content-center">
-            <div className="py-3 px-3">
-              <h1 className="text-center mb-3 text-white fw-bold">
+            <div className="p-3">
+              <h1 className="text-center mb-2 display-4 text-white fw-bold">
                 Add Furniture to Sell
               </h1>
             </div>
           </header>
         </div>
         {/* <div className="img"> */}
-        <div className="vh-50 d-flex justify-content-center">
-          <div className="w-50 card col-6 col-md-6 ">
-            <div className="p-4">
+        <div className=" d-flex justify-content-center">
+          <div className="w-50 card col-6 col-md-6">
+            <div className="p-5 ">
               <form onSubmit={furnitureForm.handleSubmit}>
                 <span
                   style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
@@ -163,14 +162,13 @@ const AddFurniture = () => {
                 </div>
                 <button
                   type="submit"
-                  className="col-6 btn btn-danger w-50 mx-auto mt-5 d-flex button justify-content-center"
+                  className="col-6 btn btn-success w-100 mx-auto mt-4 p-2 d-flex button justify-content-center"
                 >
-                  Add Furniture
+                  <h5>Add Furniture</h5>
                 </button>
               </form>
             </div>
           </div>
-        </div>
       </div>
     </div>
     // {/* </div> */}

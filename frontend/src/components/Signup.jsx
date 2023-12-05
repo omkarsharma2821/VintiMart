@@ -65,9 +65,8 @@ const Signup = () => {
   
 
   return (
-    <>
-      <div className="bg">
-        <header className="bg-dark text-white w-50 mx-auto rounded ">
+      <div className="bg p-5">
+        <header className="bg-dark text-white w-50 mx-auto rounded mb-0">
           <div className="container py-3">
             <h6 className="text-center display-6 fw-semibold ">
               Register for free, Hurry up!!
@@ -77,10 +76,11 @@ const Signup = () => {
             </h4>
           </div>
         </header>
-        <div className="d-flex justify-content-center align-items-center vh-50 bg ">
-          <div className="card w-50 col-6 col-md-6 ">
-            <div className="p-5">
-              <h2 className="text-center fw-semibold ">SignUp</h2>
+        <div className="vh-100">
+        <div className="d-flex justify-content-center">
+          <div className="card w-50 col-6 col-md-6">
+            <div className="p-5 py-3">
+              {/* <h2 className="text-center fw-semibold ">SignUp</h2> */}
               <form onSubmit={signupForm.handleSubmit} >
                 <span
                   style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
@@ -176,9 +176,9 @@ const Signup = () => {
                 </div>
                 <button
                   type="submit"
-                  className="col-6 btn btn-danger w-50 mx-auto mt-0 d-flex justify-content-center button"
+                  className="col-6 btn btn-success w-100 p-2 mt-4 mb-2 mx-auto d-flex justify-content-center button"
                 >
-                  Create account
+                  <h5>Create account</h5>
                 </button>
                 <span className="d-flex justify-content-center mb-0">
                   Already have an account -
@@ -187,11 +187,11 @@ const Signup = () => {
                   </span>
                 </span>
               </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </>
   );
 };
 

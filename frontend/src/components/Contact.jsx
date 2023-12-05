@@ -38,8 +38,7 @@ const Contact = () => {
   });
 
   return (
-    <>
-      <div className="bg-body-secondary bg p-5">
+      <div className="bg-body-secondary bg p-5 vh-100">
         <header className="bg-dark text-white w-50 rounded mx-auto ">
           <div className="container py-3 ">
             <h2 className="text-center display-4 fw-semibold">
@@ -55,10 +54,10 @@ const Contact = () => {
           </div>
         </header>
         {/* <div className="d-flex justify-content-center align-items-center vh-80 bg-body-secondary"> */}
-        <div className="">
+        <div className="d-flex">
           <div className="card col-6 col-md-6 w-50 mx-auto">
-            <div className="p-5 ">
-              <h2 className="text-center mb-3 fw-semibold">Contact Us</h2>
+            <div className="p-5 py-3">
+              {/* <h2 className="text-center mb-3 fw-semibold">Contact Us</h2> */}
               <form onSubmit={contactForm.handleSubmit}>
               <span
                   style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
@@ -109,15 +108,14 @@ const Contact = () => {
                 />
                 <label>Message</label>
                 </div>
-                <button className="col-6 text-center btn btn-danger w-50 button mx-auto d-flex justify-content-center mt-4 mb-0">
-                  Submit Query
+                <button className="col-6 text-center btn btn-success w-100 p-2 button mx-auto d-flex justify-content-center mt-5 mb-5">
+                  <h5>Submit Query</h5>
                 </button>
               </form>
-            </div>
+              </div>
           </div>
         </div>
       </div>
-    </>
   );
 };
 export default Contact;
