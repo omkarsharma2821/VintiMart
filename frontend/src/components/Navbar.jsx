@@ -19,7 +19,7 @@ const Navbar = ({ mycart }) => {
     }
   };
   return (
-    <nav className="sticky-top navbar navbar-expand-lg bg-body-secondary text-dark">
+    <nav className="sticky-top navbar navbar-expand-lg navFont">
       {/* <nav className="navbar navbar-expand-lg bg-success text-white"> */}
       <div className="container-fluid">
         <NavLink className="navbar-brand" to={"/"}>

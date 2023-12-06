@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-// import bg from "./bg.jpg"
+// import homebg from "./homebg.png"
 import "./App.css";
 import Home from "./components/Home";
 import Signup from "./components/Signup";
@@ -35,7 +35,7 @@ function App() {
           {/* <Link to ="/signup">Signup</Link> */}
           {/* <Navbar mycart={cartitems} /> */}
           <Navbar  />
-      {/* <img src={logo} alt="" style={myStyle}/> */}
+         {/* <img src={homebg} alt="" /> */}
 
           <Routes>
             <Route path="/" element={<Home />} />

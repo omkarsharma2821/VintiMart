@@ -21,7 +21,7 @@ const Login = () => {
   const loginForm = useFormik({
     initialValues: {
       email: "",
-      password: "",
+      password: ""
     },
     // call back hmko nhi pta kb call hoga lekin aap call hoga sb condition met hogi  jaise isme submit kr  rhe
     onSubmit: async (values, { resetForm }) => {
@@ -69,7 +69,7 @@ const Login = () => {
       <div className="d-flex justify-content-center">
           <header className="bg-dark w-50 card d-flex justify-content-center">
           <div className="p-3">
-            <h1 className="text-center mb-3 text-white fw-bold display-2">
+            <h1 className="text-center mb-3 text-white display-2">
               Begin with Login
             </h1>
           </div>
@@ -120,12 +120,12 @@ const Login = () => {
               >
                 <h3>Submit</h3>
               </button>
-              <h4 className="d-flex justify-content-center">
+              <h5 className="d-flex justify-content-center">
                 Dont have an account -
                 <span>
                   <NavLink to="/signup">create account</NavLink>
                 </span>
-              </h4>
+              </h5>
             </form>
           </div>
         </div>

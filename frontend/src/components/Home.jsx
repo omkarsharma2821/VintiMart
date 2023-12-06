@@ -1,5 +1,5 @@
 import React from "react";
-// import bg from "./bg.jpg";
+// import homebg from "./homebg.png";
 
 
 const Home = () => {
@@ -8,8 +8,8 @@ const Home = () => {
 
   return (
     <>
-    <div className="vh-100 home-bg ">
-      {/* <img src="" style={myStyle} alt="" /> */}
+    <div className="vh-100 home-bg">
+      {/* <img src={require('./homebg.png')} alt="" /> */}
     </div>
     <div>
     <section>

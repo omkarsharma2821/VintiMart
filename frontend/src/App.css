@@ -1,8 +1,12 @@
 
 .nav-item .active {
   /* border-bottom: 1px solid #1a1a1a; */
-  color: #ffa116 !important;
+  color: #c68a2e !important;
   /* font-weight: bold; */
+}
+.navFont{
+  background-color: #f0f8ff;
+  color: black;
 }
 .my-card-img{
   object-fit: cover;
