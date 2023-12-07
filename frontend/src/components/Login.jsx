@@ -65,7 +65,7 @@ const Login = () => {
   });
 
   return (
-      <div className="bg vh-100 p-5">
+      <div className=" vh-100 p-5">
       <div className="d-flex justify-content-center">
           <header className="bg-dark w-50 card d-flex justify-content-center">
           <div className="p-3">

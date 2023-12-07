@@ -16,7 +16,7 @@ const furnitureSchema = Yup.object().shape({
 
 const AddFurniture = () => {
   const [selFile, setSelFile] = useState("");
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const uploadFile = (e) => {
     const file = e.target.files[0];
@@ -63,14 +63,14 @@ const AddFurniture = () => {
         });
         values.image = "";
         resetForm();
-        navigate("/");
+        // navigate("/");
       }
     },
     validationSchema: furnitureSchema,
   });
 
   return (
-    <div className="bg vh-100 p-4">
+    <div className="vh-100 p-4">
         <div className="d-flex justify-content-center">
           <header className="bg-dark w-50 card d-flex justify-content-center">
             <div className="p-3">

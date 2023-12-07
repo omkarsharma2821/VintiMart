@@ -65,7 +65,7 @@ const Signup = () => {
   
 
   return (
-      <div className="bg p-5">
+      <div className=" p-5">
         <header className="bg-dark text-white w-50 mx-auto rounded mb-0">
           <div className="container py-3">
             <h6 className="text-center display-6 fw-semibold ">

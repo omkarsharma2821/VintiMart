@@ -41,7 +41,7 @@ useEffect(() => {
   };
 
   return (
-    <div>
+    <div className='bg-light'>
       <header className="bg-dark">
         <div className="container py-3">
           <h1 className="text-center display-3 mb-0 text-white fw-bold">
