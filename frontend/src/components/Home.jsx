@@ -1,6 +1,5 @@
 import React from "react";
-// import homebg from "./homebg.png";
-import video from "../videoHome.mp4"
+// import video from "../videoHome.mp4"
 
 
 const Home = () => {
@@ -10,7 +9,7 @@ const Home = () => {
       <div id="page-1">
         <div className="cursor">
         </div>
-      <video className="videoBg" autoPlay muted loop src={video}></video>
+      {/* <video className="videoBg" autoPlay muted loop src={video}></video> */}
       <div className="content vh-100">
         <nav className="help">
         </nav>
