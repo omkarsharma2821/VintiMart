@@ -44,10 +44,10 @@ useEffect(() => {
     <div className='bg-light'>
       <header className="bg-dark">
         <div className="container py-3">
-          <h1 className="text-center display-2 mb-0 text-white ">
+          <h1 className="text-center display-4 mb-0 text-white ">
           Discover Your Style
           </h1>
-            <h5 className='text-white text-center mb-4'>Home Decor for Sale - Place Where Comfort Meets Elegance</h5>
+            <h6 className='text-white text-center mb-4'>Home Decor for Sale - Place Where Comfort Meets Elegance</h6>
             <div className='input-group  d-flex mx-auto w-50'>
           <input
             type="text"
@@ -59,6 +59,7 @@ useEffect(() => {
           </div>
         </div>
       </header>
+      <div className="px-5">
       <div className="row mt-4">
         <div className="col-3">
           <div className="card shadow">
@@ -86,10 +87,10 @@ useEffect(() => {
                       <p className="text-muted">
                         {product.sponsored ? "sponsored" : ""}
                       </p>
-                      <h5><i className="fa-solid fa-rupee-sign fa-fade  px-2" style={{color: "#000000"}}></i>{product.price}</h5>
-                      <h5><i class="fa-solid fa-tag px-1"></i>{product.brand}</h5>
-                      <button onClick={() => {addItemToCart(product)}} className="btn btn-primary button">Add to Cart</button>
-                      <button onClick={() => {addItemToCart(product)}} className="btn btn-primary mx-3 button">Buy Now</button>
+                      <h6><i class="fa-solid fa-tag px-1"></i>{product.brand}</h6>
+                      <h5><i className="fa-solid fa-rupee-sign fa-fade mx-1" style={{color: "#000000"}}></i>{product.price}</h5>
+                      <button onClick={() => {addItemToCart(product)}} className="btn btn-sm btn-primary button mx-2">Add to Cart</button>
+                      <button onClick={() => {addItemToCart(product)}} className="btn btn-sm btn-primary mx-2 button">Buy Now</button>
                     </div>
                   </div>
                 </div>
@@ -97,6 +98,7 @@ useEffect(() => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   )

@@ -16,7 +16,7 @@ const Home = () => {
   <div className="container py-5">
     <div className="row">
       <div className="col-md-3">
-        <div className="card">
+        <div className="card shadow">
             <img
               className="img-fluid"
               src="images/G.gif"
@@ -28,7 +28,7 @@ const Home = () => {
         </div>
       </div>
       <div className="col-md-3">
-        <div className="card">
+        <div className="card shadow">
             <img
               className="img-fluid"
               src="images/G1.gif"
@@ -40,7 +40,7 @@ const Home = () => {
         </div>
       </div>
       <div className="col-md-3">
-        <div className="card">
+        <div className="card shadow">
             <img
               className="img-fluid"
               src="images/G2.gif"
@@ -52,7 +52,7 @@ const Home = () => {
         </div>
       </div>
       <div className="col-md-3">
-        <div className="card">
+        <div className="card shadow">
             <img
               className="img-fluid"
               src="images/G3.gif"
