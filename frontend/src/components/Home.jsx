@@ -4,34 +4,6 @@ import video from "../videoHome.mp4"
 
 
 const Home = () => {
-  // const myStyle={backgroundImage: `url(${bg})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', height: '100vh' }
-  // const myStyle={backgroundSize: 'cover', backgroundRepeat: 'no-repeat', height: '100vh', width: '100%'}
-
-  // var page1Content = document.querySelector
-  // (".content")
-  // var cursorr = document.querySelector(".cursor")
-
-  // page1Content.addEventListener("mousemove", function(dets){
-  //   gsap.to(cursorr,{
-  //     x:dets.x,
-  //     y:dets.y
-  //   })
-  // })
-  // page1Content.addEventListener("mouseenter",function(){
-  //   gsap.to(cursorr,{
-  //     scale:1,
-  //     opacity:1
-  //   })
-  // })
-  // page1Content.addEventListener("mouseleave",function(){
-  //   gsap.to(cursorr,{
-  //     scale:0,
-  //     opacity:10
-  //   })
-  // })
-
-
-
   return (
     <>
     <div id="main">
