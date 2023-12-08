@@ -1,4 +1,7 @@
-
+@font-face {
+  font-family: bigText;
+  src: url(./Rejouice-headline.ttf);
+}
 .nav-item .active {
   /* border-bottom: 1px solid #1a1a1a; */
   color: #c68a2e !important;
@@ -43,4 +46,32 @@
 .homecart{
   object-fit: cover;
   background-size: cover;
+}
+.videoBg{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+.content{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffff;
+}
+.help{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 2vw 3vw;
+}
+.homeMainFont{
+  font-size: 20vw;
+  font-family: bigText;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 // import homebg from "./homebg.png";
+import video from "../videoHome.mp4"
 
 
 const Home = () => {
@@ -8,9 +9,19 @@ const Home = () => {
 
   return (
     <>
-    <div className="vh-100 ">
-      {/* <img src={require('./homebg.png')} alt="" /> */}
+    <div id="main">
+      <div id="page-1">
+      <video className="videoBg" autoPlay muted loop src={video}></video>
+      <div className="content vh-100">
+        <nav className="help">
+        <h1 >omkar</h1>
+        <h1 >sharma</h1>
+        </nav>
+        <h1 className="homeMainFont">VintiMart</h1>
+      </div>
     </div>
+    </div>
+
     <div>
     <section>
   <div className="container py-5">
