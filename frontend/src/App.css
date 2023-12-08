@@ -9,12 +9,13 @@
   color: black;
 }
 .my-card-img{
-  object-fit: cover;
-  height: 200px;
-  transition-duration: 0.3;
+  /* object-fit: cover; */
+  height: 300px;
+  width: 300px;
+  transition: all ease 1s;
 }
 .my-card-img:hover{
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 .cart-img{
   object-fit: cover;

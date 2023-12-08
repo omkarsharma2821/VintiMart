@@ -37,7 +37,7 @@ const ViewOrders = () => {
       <div className="container py-4">
         <h1 className='text-center mb-4 text-bold'>Track Your Orders</h1>
 
-        <table className='table table-bordered table align-middle text-center table-hover table-warning'>
+        <table className='table table-bordered table align-middle text-center table-hover table-warning shadow-lg'>
           <thead>
             <tr>
               <th>S.No.</th>

@@ -67,7 +67,7 @@ const Login = () => {
   return (
       <div className=" vh-100 p-5">
       <div className="d-flex justify-content-center">
-          <header className="bg-dark w-50 card d-flex justify-content-center">
+          <header className="bg-dark w-50 card d-flex justify-content-center shadow-lg">
           <div className="p-3">
             <h1 className="text-center mb-3 text-white display-2">
               Begin with Login
@@ -76,7 +76,7 @@ const Login = () => {
         </header>
         </div>
         <div className="d-flex justify-content-center">
-        <div className="card w-50 col-6 col-md-6 p-2 py-0">
+        <div className="card w-50 col-6 col-md-6 p-2 py-0 shadow-lg">
           <div className="p-5">
             <form onSubmit={loginForm.handleSubmit}>
             <span style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>

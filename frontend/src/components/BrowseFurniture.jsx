@@ -44,10 +44,10 @@ useEffect(() => {
     <div className='bg-light'>
       <header className="bg-dark">
         <div className="container py-3">
-          <h1 className="text-center display-3 mb-0 text-white fw-bold">
+          <h1 className="text-center display-2 mb-0 text-white ">
           Discover Your Style
           </h1>
-            <h5 className='text-white text-center mb-4 '>Home Decor for Sale - Place Where Comfort Meets Elegance</h5>
+            <h5 className='text-white text-center mb-4'>Home Decor for Sale - Place Where Comfort Meets Elegance</h5>
             <div className='input-group  d-flex mx-auto w-50'>
           <input
             type="text"
@@ -61,11 +61,10 @@ useEffect(() => {
       </header>
       <div className="row mt-4">
         <div className="col-3">
-          <div className="card">
+          <div className="card shadow">
             <div className="card-body">
               <h6 className='text-muted text-center'>Apply Filter</h6>
               <hr />
-
               <select className="form-control" onChange={filterBrand}>
                 <option className='text-center' value="">Select Brand</option>
                 {brands.map((b) => (
@@ -81,7 +80,7 @@ useEffect(() => {
             <div className="row">
               {productsArray.map((product) => (
                 <div className="col-md-3 mb-4">
-                  <div className="card " style={{ overflow: "hidden" }}>
+                  <div className="card shadow" style={{ overflow: "hidden" }}>
                     <img src={'http://localhost:5000/'+product.image} alt="" className="my-card-img" />
                     <div className="card-body">
                       <p className="text-muted">

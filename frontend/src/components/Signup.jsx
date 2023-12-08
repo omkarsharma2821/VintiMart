@@ -66,7 +66,7 @@ const Signup = () => {
 
   return (
       <div className=" p-5">
-        <header className="bg-dark text-white w-50 mx-auto rounded mb-0">
+        <header className="bg-dark text-white w-50 mx-auto rounded mb-0 shadow-lg">
           <div className="container py-3">
             <h6 className="text-center display-6 fw-semibold ">
               Register for free, Hurry up!!
@@ -78,7 +78,7 @@ const Signup = () => {
         </header>
         <div className="vh-100">
         <div className="d-flex justify-content-center">
-          <div className="card w-50 col-6 col-md-6">
+          <div className="card w-50 col-6 col-md-6 shadow-lg">
             <div className="p-5 py-3">
               {/* <h2 className="text-center fw-semibold ">SignUp</h2> */}
               <form onSubmit={signupForm.handleSubmit} >

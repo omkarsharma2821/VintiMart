@@ -72,7 +72,7 @@ const AddFurniture = () => {
   return (
     <div className="vh-100 p-4">
         <div className="d-flex justify-content-center">
-          <header className="bg-dark w-50 card d-flex justify-content-center">
+          <header className="bg-dark w-50 card d-flex justify-content-center shadow-lg">
             <div className="p-3">
               <h1 className="text-center mb-2 display-4 text-white fw-bold">
                 Add Furniture to Sell
@@ -82,7 +82,7 @@ const AddFurniture = () => {
         </div>
         {/* <div className="img"> */}
         <div className=" d-flex justify-content-center">
-          <div className="w-50 card col-6 col-md-6">
+          <div className="w-50 card col-6 col-md-6 shadow-lg">
             <div className="p-5 ">
               <form onSubmit={furnitureForm.handleSubmit}>
                 <span

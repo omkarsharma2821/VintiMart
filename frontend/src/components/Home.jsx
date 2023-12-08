@@ -8,7 +8,7 @@ const Home = () => {
 
   return (
     <>
-    <div className="vh-100 home-bg">
+    <div className="vh-100 ">
       {/* <img src={require('./homebg.png')} alt="" /> */}
     </div>
     <div>
