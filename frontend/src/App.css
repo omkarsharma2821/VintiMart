@@ -1,7 +1,7 @@
-@font-face {
+/* @font-face {
   font-family: bigText;
   src: url(./Rejouice-headline.ttf);
-}
+} */
 .nav-item .active {
   /* border-bottom: 1px solid #1a1a1a; */
   color: #c68a2e !important;
@@ -10,6 +10,10 @@
 .navFont{
   background-color: #f0f8ff;
   color: black;
+}
+.homeCardsImg{
+  height: 280px;
+  width: 200;
 }
 .my-card-img{
   /* object-fit: cover; */
@@ -27,9 +31,6 @@
   background-image: url(bg.jpg);
   background-size: cover;
 }
-.carousel-img{
-  background-size: cover;
-}
 .button:hover{
   scale: 0.9;
   transition: all ease 0.2s;
@@ -38,11 +39,11 @@
   background-image: url(404.png);
   background-size: cover;
 }
-.home-bg{
+/* .home-bg{
   background-image: url(homebg.png);
   background-size: cover;
   background-position: center;
-}
+} */
 .homecart{
   object-fit: cover;
   background-size: cover;
@@ -57,12 +58,13 @@
   height: 100%;
   width: 100%;
   position: relative;
-  z-index: 2;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   color: #ffff;
+  background-color: rgba(0, 0, 0, 0.301);
 }
 .help{
   display: flex;
@@ -73,5 +75,16 @@
 }
 .homeMainFont{
   font-size: 20vw;
-  font-family: bigText;
+  /* font-family: bigText; */
 }
+/* .cursor{
+  height: 3vw;
+  width: 3vw;
+  background-color: #ff5f38;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */

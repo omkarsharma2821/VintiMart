@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import useAppContext from "../AppContext";
-// import useCartContext from "../CartContext";
+import useCartContext from "../CartContext";
 
 const Navbar = ({ mycart }) => {
   const { loggedIn, setLoggedIn, logout } = useAppContext();
