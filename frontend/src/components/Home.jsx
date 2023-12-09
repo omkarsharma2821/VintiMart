@@ -13,7 +13,7 @@ const Home = () => {
       <div className="content vh-100">
         <nav className="help">
         </nav>
-        <h1 className="homeMainFont">VintiMart</h1>
+        <h1 className="homeMainFont mb-5">VintiMart</h1>
       </div>
     </div>
     </div>
@@ -22,7 +22,7 @@ const Home = () => {
   <div className="container py-5">
     <div className="row">
       <div className="col-md-3">
-        <div className="card shadow ">
+        <div className="card shadow">
             <img
               className="img-fluid homeCardsImg"
               src="images/G.gif"
