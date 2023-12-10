@@ -49,11 +49,11 @@ useEffect(() => {
     <div className='bg-light'>
       <header className="bg-dark">
         <div className="container py-3">
-          <h1 className="text-center display-4 mb-0 text-white ">
+          <h1 className="text-center display-2 mb-0 text-white ">
           Discover Your Style
           </h1>
-            <h6 className='text-white text-center mb-4'>Home Decor for Sale - Place Where Comfort Meets Elegance</h6>
-            <div className='input-group  d-flex mx-auto w-50'>
+            <h5 className='text-white text-center mb-4'>Home Decor for Sale - Place Where Comfort Meets Elegance</h5>
+            <div className='input-group  d-flex mx-auto w-50 mb-2'>
           <input
             type="text"
             className='form-control m-auto'
