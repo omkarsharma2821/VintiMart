@@ -92,7 +92,7 @@ useEffect(() => {
                       <p className="text-muted">
                         {product.sponsored ? "sponsored" : ""}
                       </p>
-                      <h6><i class="fa-solid fa-tag px-1"></i>{product.brand}</h6>
+                      <h5><i class="fa-solid fa-tag px-1"></i>{product.brand}</h5>
                       <h5><i className="fa-solid fa-rupee-sign fa-fade mx-1" style={{color: "#000000"}}></i>{product.price}</h5>
                       <button onClick={() => {addItemToCart(product)}} className="btn btn-sm btn-primary button">Add to Cart</button>
                       <button onClick={() => {addItemToCart(product)}} className="btn btn-sm btn-primary mx-2 button">Buy Now</button>
