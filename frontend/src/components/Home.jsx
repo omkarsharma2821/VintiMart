@@ -18,6 +18,9 @@ const Home = () => {
     </div>
     </div>
     <div>
+      <div className="page2 d-flex justify-content-center align-items-center bg-light">
+        <h1 className="display-1">Things make us unique</h1>
+      </div>
     <section>
   <div className="container py-5">
     <div className="row">

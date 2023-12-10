@@ -27,15 +27,20 @@ useEffect(() => {
   const searchProduct = (e) => {
     const search = e.target.value;
     let filteredData = FurnitureList.filter((product) => {
-      return product.title.toLowerCase().includes(search.toLowerCase());
+      return product.brand.toLowerCase().includes(search.toLowerCase());
     });
     setProductsArray(filteredData);
   };
 
   const filterBrand = (e) => {
     const search = e.target.value;
+    if(!search) {
+      setProductsArray([...FurnitureList]);
+      return;
+    }
+    console.log(search);
     let filteredData = FurnitureList.filter((product) => {
-      return product.brand === search;
+      return product.brand.toLowerCase() === search.toLowerCase();
     });
     setProductsArray(filteredData); 
   };
