@@ -1,5 +1,5 @@
 import React from "react";
-// import video from "../videoHome.mp4"
+import video from "../videoBg.mp4"
 
 
 const Home = () => {
@@ -9,7 +9,7 @@ const Home = () => {
       <div id="page-1">
         <div className="cursor">
         </div>
-      {/* <video className="videoBg" autoPlay muted loop src={video}></video> */}
+      <video className="videoBg" autoPlay muted loop src={video}></video>
       <div className="content vh-100">
         <nav className="help">
         </nav>
@@ -18,10 +18,10 @@ const Home = () => {
     </div>
     </div>
     <div>
-      <div className="page2 d-flex justify-content-center align-items-center bg-light">
+      <div className="page2 d-flex justify-content-center align-items-center bg-light mt-0">
         <h1 className="display-1">Things make us unique</h1>
       </div>
-    <section>
+    <section className="bg-light">
   <div className="container py-5">
     <div className="row">
       <div className="col-md-3">
