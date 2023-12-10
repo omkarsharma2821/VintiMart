@@ -31,8 +31,8 @@ const Home = () => {
               src="images/G.gif"
               alt=""
             />
-            <button className="btn btn-primary mt-3 mx-4">Home Decor</button>
-            <button className="btn btn-primary mt-3 mx-4">Buy Now</button>
+            <h5 className="text-center mt-1 mx-4">Modern Furniture</h5>
+            <button className="btn btn-primary mt-1 mx-4">Visit Store</button>
             <h4 className="text-center mt-4" />
         </div>
       </div>
@@ -43,8 +43,8 @@ const Home = () => {
               src="images/G1.gif"
               alt=""
             />
-            <button className="btn btn-primary mt-3 mx-4">Classical Chairs</button>
-            <button className="btn btn-primary mt-3 mx-4">Buy Now</button>
+            <h5 className="text-center mt-1 mx-4">Satisfied Customer</h5>
+            <button className="btn btn-primary mt-1 mx-4">Visit Store</button>
             <h4 className="text-center mt-4" />
         </div>
       </div>
@@ -55,8 +55,8 @@ const Home = () => {
               src="images/G2.gif"
               alt=""
             />
-            <button className="btn btn-primary mt-3 mx-4">Study Table</button>
-            <button className="btn btn-primary mt-3 mx-4">Buy Now</button>
+            <h5 className="text-center mt-1 mx-4"> Customer support</h5>
+            <h5 className="btn btn-primary mt-1 mx-4">Visit Store</h5>
             <h4 className="text-center mt-4" />
         </div>
       </div>
@@ -67,15 +67,15 @@ const Home = () => {
               src="images/G3.gif"
               alt=""
             />
-            <button className="btn btn-primary mt-3 mx-4">Modern Furniture</button>
-            <button className="btn btn-primary mt-3 mx-4">Buy Now</button>
+            <h5 className="text-center mt-1 mx-4">Home Decor</h5>
+            <button className="btn btn-primary mt-1 mx-4">Visit Store</button>
             <h4 className="text-center mt-4" />
         </div>
       </div>
     </div>
   </div>
 </section>
-    <section>
+    {/* <section>
   <div className="container">
     <div className="row">
       <div className="col-md-3">
@@ -128,7 +128,7 @@ const Home = () => {
       </div>
     </div>
   </div>
-</section>
+</section> */}
     </div>
     </>
   );

@@ -8,7 +8,7 @@
   color: black;
 }
 .homeCardsImg{
-  height: 280px;
+  height: 250px;
   width: 200;
 }
 .my-card-img{
@@ -70,4 +70,5 @@
 }
 .page2{
   height: 200px;
+  width: 100%;
 }
