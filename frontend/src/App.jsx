@@ -18,6 +18,7 @@ import {Toaster} from 'react-hot-toast';
 import UserAuth from "./UserAuth";
 import Dropzone from "./components/Dropzone";
 import ViewOrders from "./components/ViewOrders";
+import Footer from "./components/Footer";
 
 function App() {
   // let cartitems = 20; //props means property. advantage of global variable is that it can be change
@@ -49,7 +50,9 @@ function App() {
             <Route path="/drop" element={<Dropzone />} />
             <Route path="/view" element={<ViewOrders />} />
             <Route path="*" element={<NotFound />} />
+            {/* <Route path="/footer" element={<Footer/>} /> */}
           </Routes>
+          <Footer/>
           </CartProvider>
           </AppProvider>
       </BrowserRouter>
