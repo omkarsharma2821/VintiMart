@@ -15,7 +15,7 @@ const Home = () => {
         </nav>
         <h1 className="homeMainFont mb-5">VintiMart</h1>
       </div>
-    </div>
+    </div> 
     </div>
     <div>
       <div className="page2 d-flex justify-content-center align-items-center bg-light mt-0">
