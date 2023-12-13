@@ -50,9 +50,9 @@ const Home = () => {
       </div>
       <div className="col-md-3">
         <div className="card shadow">
-            <img
-              className="img-fluid homeCardsImg"
-              src="images/G2.gif"
+            <video autoPlay loop muted
+              className="homeCardsImg vdo"
+              src="images/G2.mp4"
               alt=""
             />
             <h5 className="text-center mt-1 mx-4"> Customer support</h5>

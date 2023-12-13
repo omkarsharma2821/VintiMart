@@ -11,6 +11,11 @@
   height: 300px;
   /* object-fit: cover; */
 }
+.vdo{
+  width: 300px;
+  height: 291px;
+  object-fit: cover;
+}
 .my-card-img{
   /* object-fit: cover; */
   height: 300px;
