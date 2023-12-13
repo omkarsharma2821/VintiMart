@@ -28,10 +28,10 @@
 .cart-img{
   object-fit: cover;
 }
-.bg{
+/* .bg{
   background-image: url(bg.jpg);
   background-size: cover;
-}
+} */
 .button:hover{
   scale: 0.9;
   transition: all ease 0.2s;
