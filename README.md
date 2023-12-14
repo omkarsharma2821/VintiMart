@@ -44,6 +44,15 @@
 - Track Order
 - Manage Order
 
+  
+### :bangbang: Prerequisites
+
+- React
+- MongoDB
+- Node.js
+- Express
+- Postman API
+- This project uses npm as package manager
 
 ## :toolbox: Getting Started
 
