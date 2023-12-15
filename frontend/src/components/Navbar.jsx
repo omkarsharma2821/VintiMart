@@ -10,11 +10,11 @@ const Navbar = ({ mycart }) => {
   const showLoginOptions = () => {
     if (loggedIn) {
       return (
-        <li className="nav-item">
+        // <li className="nav-item">
           <button className="btn btn-danger" onClick={logout}>
             Logout
           </button>
-        </li>
+        // </li>
       );
     }else{
       return <>
