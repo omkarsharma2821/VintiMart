@@ -103,4 +103,4 @@ Omkar Sharma - [LINKEDIN](https://www.linkedin.com/in/omkarsharmaa/) <br>
 Email - omkarsharma2821@gmail.com <br>
 Project Link: [GITHUB](https://github.com/omkarsharma2821/VintiMart) 
 
-## if you liked my project, you can Star ⭐ the repo and if you want to use this template you can Fork it and can use.
+## If you liked the project, you can Star ⭐ the repo.
