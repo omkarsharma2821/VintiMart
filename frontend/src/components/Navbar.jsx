@@ -16,6 +16,19 @@ const Navbar = ({ mycart }) => {
           </button>
         </li>
       );
+    }else{
+      return <>
+        <button className="d-flex px-4 btn btn-outline-primary me-2 active">
+            <NavLink className="nav-link" to="/login">
+              Login
+            </NavLink>
+          </button>
+          <button className="d-flex px-4 btn btn-outline-primary active">
+            <NavLink className="nav-link" to="/signup">
+              Sign up
+            </NavLink>
+          </button>
+      </>
     }
   };
   return (
@@ -77,18 +90,9 @@ const Navbar = ({ mycart }) => {
               </NavLink>
             </li>
             {/* <li className="nav-item"><h4>Cart Items : {cartitems.length}</h4></li> */}
-            {showLoginOptions()}
+            
           </ul>
-          <button className="d-flex px-4 btn btn-outline-primary me-2 active">
-            <NavLink className="nav-link" to="/login">
-              Login
-            </NavLink>
-          </button>
-          <button className="d-flex px-4 btn btn-outline-primary active">
-            <NavLink className="nav-link" to="/signup">
-              Sign up
-            </NavLink>
-          </button>
+            {showLoginOptions()}
         </div>
       </div>
     </nav>
