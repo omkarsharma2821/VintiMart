@@ -78,12 +78,12 @@ const Footer = () => {
         <div className="col-md-4 col-sm-6 col-xs-12">
           <ul className="social-icons">
             <li>
-              <a className="github" href="https://github.com/omkarsharma2821">
+              <a className="github" href="https://github.com/omkarsharma2821/VintiMart/">
               <i class="fa-brands fa-github"></i>
               </a>
             </li>
             <li>
-              <a className="instagram" href="https://instagram.com/omkarsharmaa_?igshid=MmVlMjlkMTBhMg==">
+              <a className="instagram" href="https://instagram.com/omkarsharmaa_">
               <i class="fa-brands fa-instagram"></i>
               </a>
             </li>
