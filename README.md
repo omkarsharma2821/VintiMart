@@ -1,7 +1,7 @@
 <div align='center'>
 
-<h1>FutureArena</h1>
-<p>FutureArena is for furniture lovers seeking to add a touch of elegance to their homes without breaking the bank. It extends a helping hand to those seeking to furnish their homes with dignity and grace also empowers both the furniture donor and the recipient, fostering a spirit of community and shared purpose.</p>
+<h1>VintiMart</h1>
+<p>VintiMart is for furniture lovers seeking to add a touch of elegance to their homes without breaking the bank. It extends a helping hand to those seeking to furnish their homes with dignity and grace also empowers both the furniture donor and the recipient, fostering a spirit of community and shared purpose.</p>
 
 <h4> <a href=https://vintimart.netlify.app/>View Demo</a> <span> · </span> <a href="https://github.com/omkarsharma2821/VintiMart/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/omkarsharma2821/VintiMart/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/omkarsharma2821/VintiMart/issues"> Request Feature </a> </h4>
 
@@ -16,7 +16,7 @@
 - [How to clone]
 - [Contact]
 
-## :star2: Glimpses of Task
+## :star2: About The Project
 
 ### :camera: Snapshots
 <div align="center"> <a href="https://vintimart.netlify.app/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20194816.png" alt='image' width='800'/></a> </div>
