@@ -18,7 +18,7 @@ const Contact = () => {
     initialValues: {
       name: "",
       email: "",
-      messasge: "",
+      message: "",
     },
     // call back hmko nhi pta kb call hoga lekin aap call hoga sb condition met hogi  jaise isme submit kr  rhe
     onSubmit: (values, { resetForm }) => {
@@ -97,14 +97,14 @@ const Contact = () => {
                 </div>
                 </div>
                 <span style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
-                  {contactForm.errors.messasge}
+                  {contactForm.errors.message}
                 </span>
                 <div className="form-floating">
                 <textarea 
                 id="message"
                 className="form-control" placeholder="Type your message" 
                 onChange={contactForm.handleChange}
-                value={contactForm.values.messasge}
+                value={contactForm.values.message}
                 />
                 <label>Message</label>
                 </div>
