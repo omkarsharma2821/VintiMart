@@ -16,7 +16,7 @@
 - [How to clone]
 - [Contact]
 
-## :star2: About the Project
+## :star2: About The Project
 
 ### :camera: Snapshots
 <div align="center"> <a href="https://vintimart.netlify.app/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20194816.png" alt='image' width='800'/></a> </div>
