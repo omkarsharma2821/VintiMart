@@ -4,7 +4,6 @@ import { NavLink, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import * as Yup from "yup";
 import useAppContext from "../AppContext";
-import Paper from '@mui/material/Paper';
 
 const LoginSchema = Yup.object().shape({
   password: Yup.string()

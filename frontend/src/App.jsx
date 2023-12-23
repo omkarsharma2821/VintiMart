@@ -1,12 +1,9 @@
-import logo from "./logo.svg";
-// import homebg from "./homebg.png"
 import "./App.css";
 import Home from "./components/Home";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import NotFound from "./components/NotFound";
-// import Navbar from "./components/Navbar";
 import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
 import { AppProvider } from "./AppContext";
@@ -16,7 +13,6 @@ import { CartProvider } from "./CartContext";
 import CartPage from "./components/CartPage";
 import {Toaster} from 'react-hot-toast';
 import UserAuth from "./UserAuth";
-import Dropzone from "./components/Dropzone";
 import ViewOrders from "./components/ViewOrders";
 import Footer from "./components/Footer";
 
@@ -47,7 +43,7 @@ function App() {
            
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
-            <Route path="/drop" element={<Dropzone />} />
+            {/* <Route path="/drop" element={<Dropzone />} /> */}
             <Route path="/view" element={<ViewOrders />} />
             <Route path="*" element={<NotFound />} />
             {/* <Route path="/footer" element={<Footer/>} /> */}

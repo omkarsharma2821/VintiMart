@@ -46,7 +46,7 @@ const Footer = () => {
           <h6>Quick Links</h6>
           <ul className="footer-links">
             <li>
-              <a href="#">About Us</a>
+              <a href="/home">About Us</a>
             </li>
             <li>
               <a href="/contact">Contact Us</a>

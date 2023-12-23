@@ -5,10 +5,7 @@ import video from "../videoBg.mp4"
 const Home = () => {
   return (
     <>
-    <div id="main">
       <div id="page-1">
-        <div className="cursor">
-        </div>
       <video className="videoBg" autoPlay muted loop src={video}></video>
       <div className="content vh-100">
         <nav className="help">
@@ -16,7 +13,6 @@ const Home = () => {
         <h1 className="homeMainFont mb-5">VintiMart</h1>
       </div>
     </div> 
-    </div>
     <div>
       <div className="page2 d-flex justify-content-center align-items-center bg-light mt-0">
         <h1 className="display-1">Things make us unique</h1>
@@ -33,7 +29,6 @@ const Home = () => {
             />
             <h5 className="text-center mt-1 mx-4">Modern Furniture</h5>
             <button className="btn btn-primary mt-1 mx-4">Visit Store</button>
-            <h4 className="text-center mt-4" />
         </div>
       </div>
       <div className="col-md-3">
@@ -45,7 +40,6 @@ const Home = () => {
             />
             <h5 className="text-center mt-1 mx-4">Satisfied Customer</h5>
             <button className="btn btn-primary mt-1 mx-4">Visit Store</button>
-            <h4 className="text-center mt-4" />
         </div>
       </div>
       <div className="col-md-3">
@@ -57,7 +51,6 @@ const Home = () => {
             />
             <h5 className="text-center mt-1 mx-4"> Customer support</h5>
             <h5 className="btn btn-primary mt-1 mx-4">Visit Store</h5>
-            <h4 className="text-center mt-4" />
         </div>
       </div>
       <div className="col-md-3">
@@ -69,7 +62,6 @@ const Home = () => {
             />
             <h5 className="text-center mt-1 mx-4">Home Decor</h5>
             <button className="btn btn-primary mt-1 mx-4">Visit Store</button>
-            <h4 className="text-center mt-4" />
         </div>
       </div>
     </div>
