@@ -2,7 +2,7 @@
 
 const express = require('express');
 const userRouter = require('./routers/userRouter');
-const furnitureRouter  = require('./routers/FurnitureRouter');
+const furnitureRouter  = require('./routers/furnitureRouter');
 const orderRouter  = require('./routers/orderRouter');
 const utilRouter  = require('./routers/util');
 const cors = require('cors');
