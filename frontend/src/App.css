@@ -37,8 +37,7 @@
   transition: all ease 0.2s;
 }
 .error{
-  background-image: url(404.png);
-  background-size: cover;
+  width: 50%;
 }
 .homecart{
   object-fit: cover;
