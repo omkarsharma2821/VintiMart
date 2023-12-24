@@ -35,7 +35,7 @@ const Signup = () => {
       console.log(values);
       resetForm();
 
-      const res = await fetch("http://localhost:5000/user/add", {
+      const res = await fetch(`${process.env.REACT_APP_VINTIMART_URL}/user/add`, {
         method: "POST",
         body: JSON.stringify(values), //here all the things are case senstive in fetch.
         headers: {

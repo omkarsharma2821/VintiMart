@@ -26,7 +26,7 @@ const Login = () => {
     onSubmit: async (values, { resetForm }) => {
       console.log(values);
 
-      const res = await fetch("http://localhost:5000/user/authenticate", {
+      const res = await fetch(`${process.env.REACT_APP_VINTIMART_URL}/user/authenticate`, {
         method: "POST",
         body: JSON.stringify(values),
         headers: {

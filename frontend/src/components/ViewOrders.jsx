@@ -6,7 +6,7 @@ const ViewOrders = () => {
 
   const [furnitureList, setfurnitureList] = useState([]);
   const getfurnitureData = async () => {
-    const res = await fetch('http://localhost:5000/order/getall');
+    const res = await fetch(`${process.env.REACT_APP_VINTIMART_URL}/order/getall`);
     console.log(res.status);
     const data = await res.json();
     console.table(data);
@@ -21,7 +21,7 @@ const ViewOrders = () => {
 
   // request to delete
   const deletefurniture = async (id) => {
-    const res = await fetch('http://localhost:5000/order/delete/' + id, {
+    const res = await fetch(`${process.env.REACT_APP_VINTIMART_URL}/order/delete/` + id, {
       method: 'DELETE'
     });
     console.log(res.status)
@@ -59,7 +59,7 @@ const ViewOrders = () => {
                       <summary>View More</summary>
                     {furniture.items.map(item => (
                     <div className='d-flex align-items-center justify-content-between bg-white p-4'>
-                      <img height={50} src={"http://localhost:5000/"+item.image} alt="" />
+                      <img height={50} src={`${process.env.REACT_APP_VINTIMART_URL}/`+item.image} alt="" />
                       <h5>{item.brand}</h5>
                       <p>{item.material}</p>
                     </div>

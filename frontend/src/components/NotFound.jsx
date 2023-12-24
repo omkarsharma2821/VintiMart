@@ -8,7 +8,7 @@ const NotFound = () => {
         <h1 className='text-muted text-center my-2'>Oops! Something Went Wrong </h1>
         </div>
         <div className="d-flex justify-content-center">
-          <img className='error' src="https://www.cloudconsult.ca/public/no-search-found.png" alt="PAGE NOT FOUND IMAGE" />
+          <img className='error' src="https://www.cloudconsult.ca/public/no-search-found.png" alt="PAGE NOT FOUND" />
         </div>
         </div>
     </>

@@ -15,7 +15,7 @@ const CartPage = () => {
     const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')));
 
     const saveOrder = async () => {
-        const res = await fetch('http://localhost:5000/order/add', {
+        const res = await fetch(`${process.env.REACT_APP_VINTIMART_URL}/order/add`, {
             method: 'POST',
             body: JSON.stringify({
                 items: cartitems,
@@ -61,7 +61,7 @@ const CartPage = () => {
                     cartitems.map((item, index) => (
                         <tr>
                             <td>
-                            <img height={50} src={"http://localhost:5000/"+item.image} alt="" />
+                            <img height={50} src={`${process.env.REACT_APP_VINTIMART_URL}/`+item.image} alt="" />
                             </td>
                             <td>{item.brand}</td>
                             <td>{item.price}</td>

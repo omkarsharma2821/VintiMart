@@ -10,7 +10,7 @@ const BrowseFurniture = () => {
   const { addItemToCart } = useCartContext();
 
   const getFurnitureData = async () => {
-    const res = await fetch('http://localhost:5000/furniture/getall');
+    const res = await fetch(`${process.env.REACT_APP_VINTIMART_URL}/getall`);
     console.log(res.status);
     const data = await res.json();
     console.table(data);
@@ -87,7 +87,7 @@ const BrowseFurniture = () => {
                 {productsArray.map((product) => (
                   <div className="col-md-3 mb-4">
                     <div className="card shadow" style={{ overflow: "hidden" }}>
-                      <img src={'http://localhost:5000/' + product.image} alt="" className="my-card-img" />
+                      <img src={`${process.env.REACT_APP_VINTIMART_URL}/` + product.image} alt="" className="my-card-img" />
                       <div className="card-body">
                         <p className="text-muted">
                           {product.sponsored ? "sponsored" : ""}

@@ -16,7 +16,7 @@ const port = 5000;
 //  middlewares express
 app.use(express.json()); // if not put data will be undefined 
 app.use(cors({
-    origin: ['http://localhost:3000']
+    origin: [`${process.env.REACT_APP_VINTIMART_URL}`]
 }));
 app.use('/user', userRouter);
 app.use('/furniture', furnitureRouter);

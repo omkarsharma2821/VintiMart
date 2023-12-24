@@ -23,7 +23,7 @@ const AddFurniture = () => {
     const fd = new FormData();
     setSelFile(file.name);
     fd.append("myfile", file);
-    fetch("http://localhost:5000/util/uploadfile", {
+    fetch(`${process.env.REACT_APP_VINTIMART_URL}/util/uploadfile`, {
       method: "POST",
       body: fd,
     }).then((res) => {
@@ -47,7 +47,7 @@ const AddFurniture = () => {
       values.image = selFile;
       console.log(values);
 
-      const res = await fetch("http://localhost:5000/furniture/add", {
+      const res = await fetch(`${process.env.REACT_APP_VINTIMART_URL}/furniture/add`, {
         method: "POST",
         body: JSON.stringify(values), //here all the things are case senstive in fetch.
         headers: {
