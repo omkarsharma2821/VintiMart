@@ -1,13 +1,15 @@
-const mongoose = require('mongoose');
-const url = "mongodb+srv://omkarsharma2821:omkar123@cluster0.jwxneht.mongodb.net/miniprojectdatabase?retryWrites=true&w=majority";
+const dotenv=require('dotenv');
+const mongoose=require('mongoose')
+dotenv.config();
 
-mongoose.connect(url)
+// console.log(process.env. DB_URL)
+
+mongoose.connect(process.env.DB_URL)
 .then((result) => {
-    console.log('Database connected');
+console.log('database connected')    
 
-}).catch((err) => { 
-    console.log('err');   
-
+}).catch((err) => {
+   console.log(err); 
 });
 
 module.exports = mongoose;
