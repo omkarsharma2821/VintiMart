@@ -87,7 +87,7 @@ const BrowseFurniture = () => {
                 {productsArray.map((product) => (
                   <div className="col-md-3 mb-4">
                     <div className="card shadow" style={{ overflow: "hidden" }}>
-                      <img src={`${process.env.REACT_APP_VINTIMART_URL}/${product.image}`} alt="" className="my-card-img" />
+                      <img src={`${process.env.REACT_APP_VINTIMART_URL}/uploads${product.image}`} alt="wait" className="my-card-img" />
                       <div className="card-body">
                         <p className="text-muted">
                           {product.sponsored ? "sponsored" : ""}
