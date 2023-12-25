@@ -3,7 +3,7 @@
 <h1>VintiMart</h1>
 <p>VintiMart is for furniture lovers seeking to add a touch of elegance to their homes without breaking the bank. It extends a helping hand to those seeking to furnish their homes with dignity and grace also empowers both the furniture donor and the recipient, fostering a spirit of community and shared purpose.</p>
 
-<h4> <a href=https://vintimart.netlify.app/>View Demo</a> <span> · </span> <a href="https://github.com/omkarsharma2821/VintiMart/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/omkarsharma2821/VintiMart/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/omkarsharma2821/VintiMart/issues"> Request Feature </a> </h4>
+<h4> <a href=https://vintimart-9x78.onrender.com/>View Demo</a> <span> · </span> <a href="https://github.com/omkarsharma2821/VintiMart/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/omkarsharma2821/VintiMart/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/omkarsharma2821/VintiMart/issues"> Request Feature </a> </h4>
 
 
 </div>
@@ -19,16 +19,16 @@
 ## :star2: About The Project
 
 ### :camera: Snapshots
-<div align="center"> <a href="https://vintimart.netlify.app/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20194816.png" alt='image' width='800'/></a> </div>
-<div align="center"> <a href="https://vintimart.netlify.app/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20195008.png" alt='image' width='800'/></a> </div>
-<div align="center"> <a href="https://vintimart.netlify.app/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20195541.png" alt='image' width='800'/></a> </div>
-<div align="center"> <a href="https://vintimart.netlify.app/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20195650.png" alt='image' width='800'/></a> </div>
-<div align="center"> <a href="https://vintimart.netlify.app/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20195909.png" alt='image' width='800'/></a> </div>
-<div align="center"> <a href="https://vintimart.netlify.app/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20200049.png" alt='image' width='800'/></a> </div>
-<div align="center"> <a href="https://vintimart.netlify.app/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20204917.png" alt='image' width='800'/></a> </div>
-<div align="center"> <a href="https://vintimart.netlify.app/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20205039.png" alt='image' width='800'/></a> </div>
-<div align="center"> <a href="https://vintimart.netlify.app/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20205158.png" alt='image' width='800'/></a> </div>
-<div align="center"> <a href="https://vintimart.netlify.app/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20205331.png" alt='image' width='800'/></a> </div>
+<div align="center"> <a href="https://vintimart-9x78.onrender.com/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20194816.png" alt='image' width='800'/></a> </div>
+<div align="center"> <a href="https://vintimart-9x78.onrender.com/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20195008.png" alt='image' width='800'/></a> </div>
+<div align="center"> <a href="https://vintimart-9x78.onrender.com/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20195541.png" alt='image' width='800'/></a> </div>
+<div align="center"> <a href="https://vintimart-9x78.onrender.com/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20195650.png" alt='image' width='800'/></a> </div>
+<div align="center"> <a href="https://vintimart-9x78.onrender.com/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20195909.png" alt='image' width='800'/></a> </div>
+<div align="center"> <a href="https://vintimart-9x78.onrender.com/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20200049.png" alt='image' width='800'/></a> </div>
+<div align="center"> <a href="https://vintimart-9x78.onrender.com/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20204917.png" alt='image' width='800'/></a> </div>
+<div align="center"> <a href="https://vintimart-9x78.onrender.com/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20205039.png" alt='image' width='800'/></a> </div>
+<div align="center"> <a href="https://vintimart-9x78.onrender.com/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20205158.png" alt='image' width='800'/></a> </div>
+<div align="center"> <a href="https://vintimart-9x78.onrender.com/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20205331.png" alt='image' width='800'/></a> </div>
 
 
 <details> <summary>Database</summary> <ul>
