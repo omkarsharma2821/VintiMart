@@ -59,9 +59,9 @@ const ViewOrders = () => {
                       <summary>View More</summary>
                     {furniture.items.map(item => (
                     <div className='d-flex align-items-center justify-content-between bg-white p-4'>
-                      <img height={50} src={`${process.env.REACT_APP_VINTIMART_URL}/`+item.image} alt="" />
+                      <img height={50} src={`${process.env.REACT_APP_VINTIMART_URL}/${item.image}`} alt="" />
                       <h5>{item.brand}</h5>
-                      <p>{item.material}</p>
+                      <h5>{item.material}</h5>
                     </div>
                   ))}
                     </details>
