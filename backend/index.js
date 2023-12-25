@@ -29,7 +29,8 @@ app.use('/order', orderRouter);
 app.use('/contact', contactRouter);
 app.use('/util', utilRouter);
 
-app.use(express.static('./uploads'));
+// app.use(express.static('path/to/upload/folder'))
+app.use(express.static('/https://vintimart.onrender.com/uploads'));
 // asynchornous wait nhi krta dusre function ka phle ho jata hai
 
 
