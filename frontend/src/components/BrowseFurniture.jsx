@@ -67,7 +67,7 @@ const BrowseFurniture = () => {
       <div className="px-5">
         <div className="row mt-4">
           <div className="col-3">
-            <div className="card shadow">
+            <div className="card shadow mb-4">
               <div className="card-body">
                 <h6 className='text-muted text-center'>Apply Filter</h6>
                 <hr />
