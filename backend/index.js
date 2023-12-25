@@ -15,9 +15,14 @@ const port = 5000;
 
 //  middlewares express
 app.use(express.json()); // if not put data will be undefined 
-app.use(cors({
-    origin: [`${process.env.REACT_APP_VINTIMART_URL}`]
-}));
+// app.use(cors({
+//     origin: [`${process.env.REACT_APP_VINTIMART_URL}`]
+// }));
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'https://vintimart-9x78.onrender.com');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    next();
+  });
 app.use('/user', userRouter);
 app.use('/furniture', furnitureRouter);
 app.use('/order', orderRouter);
