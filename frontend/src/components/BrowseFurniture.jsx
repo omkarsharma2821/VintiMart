@@ -10,7 +10,7 @@ const BrowseFurniture = () => {
   const { addItemToCart } = useCartContext();
 
   const getFurnitureData = async () => {
-    const res = await fetch(`${process.env.REACT_APP_VINTIMART_URL}/getall`);
+    const res = await fetch(`${process.env.REACT_APP_VINTIMART_URL}/furniture/getall`);
     console.log(res.status);
     const data = await res.json();
     console.table(data);
