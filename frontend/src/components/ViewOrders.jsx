@@ -28,7 +28,7 @@ const ViewOrders = () => {
     if (res.status === 200) {
 
       getfurnitureData()
-      toast.success("Prediction Deleteed successfully");
+      toast.success("Furniture Deleteed successfully");
     }
   }
 
@@ -45,6 +45,7 @@ const ViewOrders = () => {
               <th>Details</th>
               <th>Delivery Address</th>
               <th>Remove Item</th>
+              {/* <th colSpan={2} className='text-center'>Action</th> */}
             </tr>
           </thead>
           <tbody>
