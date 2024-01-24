@@ -28,7 +28,7 @@ const ViewOrders = () => {
     if (res.status === 200) {
 
       getfurnitureData()
-      toast.success("Furniture Deleteed successfully");
+      toast.success("Prediction Deleteed successfully");
     }
   }
 
