@@ -28,7 +28,7 @@ const Home = () => {
               alt=""
             />
             <h5 className="text-center mt-1 mx-4">Modern Furniture</h5>
-            <button className="btn btn-primary mt-1 mx-4 mb-3">Visit Store</button>
+            <a href="/browsefurniture" className="d-flex justify-content-center"><button className="btn btn-primary mt-1 mx-4 mb-3 w-75">Visit Store</button></a>
         </div>
       </div>
       <div className="col-md-3">
@@ -39,7 +39,7 @@ const Home = () => {
               alt=""
             />
             <h5 className="text-center mt-1 mx-4">Satisfied Customer</h5>
-            <button className="btn btn-primary mt-1 mx-4 mb-3">Visit Store</button>
+            <a href="/browsefurniture" className="d-flex justify-content-center"><button className="btn btn-primary mt-1 mx-4 mb-3 w-75">Visit Store</button></a>
         </div>
       </div>
       <div className="col-md-3">
@@ -50,7 +50,7 @@ const Home = () => {
               alt=""
             />
             <h5 className="text-center mt-1 mx-4"> Customer support</h5>
-            <h5 className="btn btn-primary mt-1 mx-4 mb-4">Visit Store</h5>
+            <a href="/browsefurniture" className="d-flex justify-content-center"><button className="btn btn-primary mt-1 mx-4 mb-3 w-75">Visit Store</button></a>
         </div>
       </div>
       <div className="col-md-3">
@@ -61,7 +61,7 @@ const Home = () => {
               alt=""
             />
             <h5 className="text-center mt-1 mx-4">Home Decor</h5>
-            <button className="btn btn-primary mt-1 mx-4 mb-3">Visit Store</button>
+            <a href="/browsefurniture" className="d-flex justify-content-center"><button className="btn btn-primary mt-1 mx-4 mb-3 w-75">Visit Store</button></a>
         </div>
       </div>
     </div>
