@@ -10,7 +10,8 @@ const Home = () => {
       <div className="content vh-100">
         <nav className="help">
         </nav>
-        <h1 className="homeMainFont mb-5">VintiMart</h1>
+       <h1 className="homeMainFont mb-5" style={{textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)"}}>
+        VintiMart</h1>
       </div>
     </div> 
     <div>
