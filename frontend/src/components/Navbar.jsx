@@ -11,14 +11,15 @@ const Navbar = ({ mycart }) => {
     if (loggedIn) {
       return (
         // <li className="nav-item">
-          <button className="btn btn-danger" onClick={logout}>
-            Logout
-          </button>
+        <button className="btn btn-danger" onClick={logout}>
+          Logout
+        </button>
         // </li>
       );
-    }else{
-      return <>
-        <button className="d-flex px-4 btn btn-outline-primary me-2 active">
+    } else {
+      return (
+        <>
+          <button className="d-flex px-4 btn btn-outline-primary me-2 active">
             <NavLink className="nav-link" to="/login">
               Login
             </NavLink>
@@ -28,7 +29,8 @@ const Navbar = ({ mycart }) => {
               Sign up
             </NavLink>
           </button>
-      </>
+        </>
+      );
     }
   };
   return (
@@ -36,8 +38,10 @@ const Navbar = ({ mycart }) => {
       {/* <nav className="navbar navbar-expand-lg bg-success text-white"> */}
       <div className="container-fluid">
         <NavLink className="navbar-brand" to={"/"}>
-        <span className="px-3">VintiMart</span> 
-          <span className="px-"><i class="fa-solid fa-bounce fa-chair  fa-xl"></i></span>
+          <span className="px-3">VintiMart</span>
+          <span className="px-">
+            <i class="fa-solid fa-bounce fa-chair  fa-xl"></i>
+          </span>
         </NavLink>
         <button
           className="navbar-toggler"
@@ -62,7 +66,7 @@ const Navbar = ({ mycart }) => {
                 Add Furniture
               </NavLink>
             </li>
-            
+
             <li className="nav-item">
               <NavLink className="nav-link" to="/browsefurniture">
                 Browse Furniture
@@ -86,13 +90,14 @@ const Navbar = ({ mycart }) => {
             <li className="nav-item">
               <NavLink className="nav-link" to="/cartpage">
                 {/* My Cart */}
-                <span className="px-2"><i class="fa-solid fa-cart-shopping fa-xl style={color: #9d9dd8}"></i></span>
+                <span className="px-2">
+                  <i class="fa-solid fa-cart-shopping fa-xl style={color: #9d9dd8}"></i>
+                </span>
               </NavLink>
             </li>
             {/* <li className="nav-item"><h4>Cart Items : {cartitems.length}</h4></li> */}
-            
           </ul>
-            {showLoginOptions()}
+          {showLoginOptions()}
         </div>
       </div>
     </nav>

@@ -28,20 +28,22 @@ const Signup = () => {
       email: "",
       password: "",
       confirm: "",
-
     },
     // call back hmko nhi pta kb call hoga lekin aap call hoga sb condition met hogi  jaise isme submit kr  rhe
     onSubmit: async (values, { resetForm }) => {
       console.log(values);
       resetForm();
 
-      const res = await fetch(`${process.env.REACT_APP_VINTIMART_URL}/user/add`, {
-        method: "POST",
-        body: JSON.stringify(values), //here all the things are case senstive in fetch.
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const res = await fetch(
+        `${process.env.REACT_APP_VINTIMART_URL}/user/add`,
+        {
+          method: "POST",
+          body: JSON.stringify(values), //here all the things are case senstive in fetch.
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       console.log(res);
       if (res.status === 200) {
         Swal.fire({
@@ -62,62 +64,65 @@ const Signup = () => {
     validationSchema: SignupSchema,
   });
 
-  
-
   return (
-      <div className=" p-5">
-        <header className="bg-dark text-white w-50 mx-auto rounded mb-0 shadow-lg">
-          <div className="container py-3">
-            <h6 className="text-center display-6 fw-semibold ">
-              Register for free, Hurry up!!
-            </h6>
-            <h4 className="text-center fw-light">
-              Create account to save your journey
-            </h4>
-          </div>
-        </header>
-        <div className="vh-100">
+    <div className=" p-5">
+      <header className="bg-dark text-white w-50 mx-auto rounded mb-0 shadow-lg">
+        <div className="container py-3">
+          <h6 className="text-center display-6 fw-semibold ">
+            Register for free, Hurry up!!
+          </h6>
+          <h4 className="text-center fw-light">
+            Create account to save your journey
+          </h4>
+        </div>
+      </header>
+      <div className="vh-100">
         <div className="d-flex justify-content-center">
           <div className="card w-50 col-6 col-md-6 shadow-lg">
             <div className="p-5 py-3">
               {/* <h2 className="text-center fw-semibold ">SignUp</h2> */}
-              <form onSubmit={signupForm.handleSubmit} >
+              <form onSubmit={signupForm.handleSubmit}>
                 <span
-                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
+                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
+                >
                   {signupForm.touched.name && signupForm.errors.name}
                 </span>
-              <div class="input-group">
-                <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
-                <div className="form-floating">
-                <input
-                  id="name"
-                  onChange={signupForm.handleChange}
-                  value={signupForm.values.name}
-                  type="text"
-                  className="form-control"
-                  placeholder="Username"
-                />
-                <label>Username</label>
-                </div>
+                <div class="input-group">
+                  <span class="input-group-text">
+                    <i class="fa-solid fa-user"></i>
+                  </span>
+                  <div className="form-floating">
+                    <input
+                      id="name"
+                      onChange={signupForm.handleChange}
+                      value={signupForm.values.name}
+                      type="text"
+                      className="form-control"
+                      placeholder="Username"
+                    />
+                    <label>Username</label>
+                  </div>
                 </div>
                 <span
-                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
+                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
+                >
                   {signupForm.touched.email && signupForm.errors.email}
                 </span>
                 <div class="input-group">
-                <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
-                <div className="form-floating">
-                <input
-                  id="email"
-                  onChange={signupForm.handleChange}
-                  value={signupForm.values.email}
-                  type="email"
-                  className="form-control"
-                  placeholder="Email"
-                />
-                <label>Email</label>
-                </div>
-                  
+                  <span class="input-group-text">
+                    <i class="fa-solid fa-envelope"></i>
+                  </span>
+                  <div className="form-floating">
+                    <input
+                      id="email"
+                      onChange={signupForm.handleChange}
+                      value={signupForm.values.email}
+                      type="email"
+                      className="form-control"
+                      placeholder="Email"
+                    />
+                    <label>Email</label>
+                  </div>
                 </div>
                 {/* <div className="form-floating">
                 <input
@@ -136,43 +141,46 @@ const Signup = () => {
                 </span>
                 </div> */}
                 <span
-                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
+                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
+                >
                   {signupForm.touched.password && signupForm.errors.password}
                 </span>
                 <div class="input-group">
-                <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
-                <div className="form-floating">
-                <input
-                  id="password"
-                  onChange={signupForm.handleChange}
-                  value={signupForm.values.password}
-                  type="password"
-                  className="form-control"
-                  placeholder="password"
-                />
-                <label>Password</label>
-                
-                </div>
+                  <span class="input-group-text">
+                    <i class="fa-solid fa-lock"></i>
+                  </span>
+                  <div className="form-floating">
+                    <input
+                      id="password"
+                      onChange={signupForm.handleChange}
+                      value={signupForm.values.password}
+                      type="password"
+                      className="form-control"
+                      placeholder="password"
+                    />
+                    <label>Password</label>
+                  </div>
                 </div>
                 <span
                   style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
                 >
-                  {signupForm.touched.confirm &&
-                    signupForm.errors.confirm}
+                  {signupForm.touched.confirm && signupForm.errors.confirm}
                 </span>
                 <div className="input-group mb-3">
-                <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
-                <div className="form-floating">
-                <input
-                  id="confirm"
-                  onChange={signupForm.handleChange}
-                  value={signupForm.values.confirmpassword}
-                  type="password"
-                  className="form-control"
-                  placeholder="password"
-                />
-                <label>Confirm Password</label>
-                </div>
+                  <span class="input-group-text">
+                    <i class="fa-solid fa-lock"></i>
+                  </span>
+                  <div className="form-floating">
+                    <input
+                      id="confirm"
+                      onChange={signupForm.handleChange}
+                      value={signupForm.values.confirmpassword}
+                      type="password"
+                      className="form-control"
+                      placeholder="password"
+                    />
+                    <label>Confirm Password</label>
+                  </div>
                 </div>
                 <button
                   type="submit"
@@ -187,11 +195,11 @@ const Signup = () => {
                   </span>
                 </span>
               </form>
-              </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
   );
 };
 

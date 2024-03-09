@@ -13,26 +13,29 @@ const LoginSchema = Yup.object().shape({
 
   email: Yup.string().email("Invalid email").required("Required"),
 });
-const Login = () => {  
+const Login = () => {
   const navigate = useNavigate();
   const { setLoggedIn } = useAppContext();
 
   const loginForm = useFormik({
     initialValues: {
       email: "",
-      password: ""
+      password: "",
     },
     // call back hmko nhi pta kb call hoga lekin aap call hoga sb condition met hogi  jaise isme submit kr  rhe
     onSubmit: async (values, { resetForm }) => {
       console.log(values);
 
-      const res = await fetch(`${process.env.REACT_APP_VINTIMART_URL}/user/authenticate`, {
-        method: "POST",
-        body: JSON.stringify(values),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const res = await fetch(
+        `${process.env.REACT_APP_VINTIMART_URL}/user/authenticate`,
+        {
+          method: "POST",
+          body: JSON.stringify(values),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       console.log(res.status);
       if (res.status === 200) {
         Swal.fire({
@@ -64,54 +67,58 @@ const Login = () => {
   });
 
   return (
-      <div className=" vh-100 p-5">
+    <div className=" vh-100 p-5">
       <div className="d-flex justify-content-center">
-          <header className="bg-dark w-50 card d-flex justify-content-center shadow-lg">
+        <header className="bg-dark w-50 card d-flex justify-content-center shadow-lg">
           <div className="p-3">
             <h1 className="text-center mb-3 text-white display-2">
               Begin with Login
             </h1>
           </div>
         </header>
-        </div>
-        <div className="d-flex justify-content-center">
+      </div>
+      <div className="d-flex justify-content-center">
         <div className="card w-50 col-6 col-md-6 p-2 py-0 shadow-lg">
           <div className="p-5">
             <form onSubmit={loginForm.handleSubmit}>
-            <span style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
+              <span style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
                 {loginForm.errors.email}
               </span>
               <div className="input-group ">
-                <span className="input-group-text"><i class="fa-solid fa-user "></i></span>
+                <span className="input-group-text">
+                  <i class="fa-solid fa-user "></i>
+                </span>
                 <div className="form-floating">
-              <input
-                id="email"
-                onChange={loginForm.handleChange}
-                value={loginForm.values.email}
-                type="email"
-                className="form-control"
-                placeholder="Email address"
-              />
-              <label for="email">Email address</label>
-              
-              </div>
+                  <input
+                    id="email"
+                    onChange={loginForm.handleChange}
+                    value={loginForm.values.email}
+                    type="email"
+                    className="form-control"
+                    placeholder="Email address"
+                  />
+                  <label for="email">Email address</label>
+                </div>
               </div>
               <span style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
                 {loginForm.errors.password}
               </span>
               <div className="input-group">
-                <span className="input-group-text"> <i className="fa-solid fa-lock"></i></span>
-              <div className="form-floating">
-              <input
-                id="password"
-                onChange={loginForm.handleChange}
-                value={loginForm.values.password}
-                type="password"
-                className="form-control"
-                placeholder="Enter your password"
-              />
-              <label for='password'>Password</label>
-              </div>
+                <span className="input-group-text">
+                  {" "}
+                  <i className="fa-solid fa-lock"></i>
+                </span>
+                <div className="form-floating">
+                  <input
+                    id="password"
+                    onChange={loginForm.handleChange}
+                    value={loginForm.values.password}
+                    type="password"
+                    className="form-control"
+                    placeholder="Enter your password"
+                  />
+                  <label for="password">Password</label>
+                </div>
               </div>
               <button
                 type="submit"
@@ -129,7 +136,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-      </div>
+    </div>
   );
 };
 
