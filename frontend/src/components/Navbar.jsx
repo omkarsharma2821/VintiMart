@@ -5,16 +5,13 @@ import useCartContext from "../CartContext";
 
 const Navbar = ({ mycart }) => {
   const { loggedIn, setLoggedIn, logout } = useAppContext();
-  // const {cartitems} = useCartContext();
 
   const showLoginOptions = () => {
     if (loggedIn) {
       return (
-        // <li className="nav-item">
         <button className="btn btn-danger" onClick={logout}>
           Logout
         </button>
-        // </li>
       );
     } else {
       return (
@@ -35,10 +32,11 @@ const Navbar = ({ mycart }) => {
   };
   return (
     <nav className="sticky-top navbar navbar-expand-lg navFont shadow-lg">
-      {/* <nav className="navbar navbar-expand-lg bg-success text-white"> */}
       <div className="container-fluid">
         <NavLink className="navbar-brand" to={"/"}>
-          <span className="px-3" style={{ fontSize: '26px' }}>VintiMart</span>
+          <span className="px-3" style={{ fontSize: "26px" }}>
+            VintiMart
+          </span>
           <span className="px-">
             <i class="fa-solid fa-bounce fa-chair  fa-xl"></i>
           </span>
@@ -77,11 +75,6 @@ const Navbar = ({ mycart }) => {
                 Contact Us
               </NavLink>
             </li>
-            {/* <li className="nav-item">
-              <NavLink className="nav-link" to="/drop">
-                Dropzone
-              </NavLink>
-            </li> */}
             <li className="nav-item">
               <NavLink className="nav-link" to="/view">
                 View Order
@@ -89,13 +82,11 @@ const Navbar = ({ mycart }) => {
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/cartpage">
-                {/* My Cart */}
                 <span className="px-2">
                   <i class="fa-solid fa-cart-shopping fa-xl style={color: #9d9dd8}"></i>
                 </span>
               </NavLink>
             </li>
-            {/* <li className="nav-item"><h4>Cart Items : {cartitems.length}</h4></li> */}
           </ul>
           {showLoginOptions()}
         </div>
