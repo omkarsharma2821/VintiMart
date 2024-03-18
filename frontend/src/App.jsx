@@ -17,22 +17,14 @@ import ViewOrders from "./components/ViewOrders";
 import Footer from "./components/Footer";
 
 function App() {
-  // let cartitems = 20; //props means property. advantage of global variable is that it can be change
-  // const myStyle={backgroundImage: `url(${bg})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', height: '100vh' }
   return (
     <div>
-      {/* <div style={myStyle}> */}
       <Toaster position = "top-right"/>
       <BrowserRouter>
       <AppProvider>
         
           <CartProvider>
-          {/* rouetes mtlb address create krna */}
-          {/* <Link to ="/login">Login</Link> */}
-          {/* <Link to ="/signup">Signup</Link> */}
-          {/* <Navbar mycart={cartitems} /> */}
           <Navbar  />
-         {/* <img src={homebg} alt="" /> */}
 
           <Routes>
             <Route path="/" element={<Home />} />
