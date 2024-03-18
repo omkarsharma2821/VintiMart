@@ -124,22 +124,6 @@ const Signup = () => {
                     <label>Email</label>
                   </div>
                 </div>
-                {/* <div className="form-floating">
-                <input
-                  id="phone"
-                  onChange={signupForm.handleChange}
-                  value={signupForm.values.phone}
-                  type="tel"
-                  className="form-control"
-                  placeholder="Phone"
-                />
-                <label>Phone</label>
-                <span
-                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
-                >
-                  {signupForm.touched.phone && signupForm.errors.phone}
-                </span>
-                </div> */}
                 <span
                   style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
                 >

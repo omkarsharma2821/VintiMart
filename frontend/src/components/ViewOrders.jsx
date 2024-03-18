@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
-// import { Link } from 'react-router-dom';
 
 const ViewOrders = () => {
   const [furnitureList, setfurnitureList] = useState([]);
@@ -14,7 +13,6 @@ const ViewOrders = () => {
     setfurnitureList(data);
   };
   useEffect(() => {
-    //when component opens
     getfurnitureData();
   }, []);
 
@@ -46,7 +44,6 @@ const ViewOrders = () => {
               <th>Details</th>
               <th>Delivery Address</th>
               <th>Remove Item</th>
-              {/* <th colSpan={2} className='text-center'>Action</th> */}
             </tr>
           </thead>
           <tbody>
@@ -71,10 +68,6 @@ const ViewOrders = () => {
                   </details>
                 </td>
                 <td>{furniture.address}</td>
-                {/* <td>{furniture.user.name}</td> */}
-                {/* <td>
-                    <Link to={"/updatefurniture/" + furniture._id} className='btn btn-primary button'>Edit</Link>
-                  </td> */}
                 <td>
                   <button
                     onClick={() => deletefurniture(furniture._id)}
