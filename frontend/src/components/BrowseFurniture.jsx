@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import productData from "./DummyData"
 import useCartContext from "../CartContext";
 
 const BrowseFurniture = () => {
@@ -130,7 +129,6 @@ const BrowseFurniture = () => {
                         >
                           Add to Cart
                         </button>
-                        {/* <button onClick={() => {addItemToCart(product)}} className="btn btn-sm btn-primary mx-2 button">Buy Now</button> */}
                         <button
                           class="btn btn-primary btn-sm mx-2"
                           type="button"

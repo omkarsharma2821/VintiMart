@@ -47,17 +47,11 @@ const Contact = () => {
           <h5 className="text-center fw-light">
             need help or have query? - we're here for you.
           </h5>
-          {/* <div class="input-group mt-5 w-75 mx-auto"> */}
-          {/* <input type="text" class="form-control form-control-lg"> */}
-          {/* <button class="btn btn-warning"><i class="fa-solid fa-magnifying-glass"></i></button> */}
-          {/* </div> */}
         </div>
       </header>
-      {/* <div className="d-flex justify-content-center align-items-center vh-80 bg-body-secondary"> */}
       <div className="d-flex">
         <div className="card col-6 col-md-6 w-50 mx-auto shadow-lg">
           <div className="p-5 py-3">
-            {/* <h2 className="text-center mb-3 fw-semibold">Contact Us</h2> */}
             <form onSubmit={contactForm.handleSubmit}>
               <span style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
                 {contactForm.errors.name}

@@ -1,7 +1,6 @@
 import { useFormik } from "formik";
 import toast from "react-hot-toast";
 import React, { useState } from "react";
-// import { Navigate, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import * as Yup from "yup";
 
@@ -82,7 +81,6 @@ const AddFurniture = () => {
           </div>
         </header>
       </div>
-      {/* <div className="img"> */}
       <div className=" d-flex justify-content-center">
         <div className="w-50 card col-6 col-md-6 shadow-lg">
           <div className="p-5 ">
@@ -146,9 +144,6 @@ const AddFurniture = () => {
               </div>
               <div class="input-group mb-3">
                 <input type="file" class="form-control" onChange={uploadFile} />
-                {/* <label class="input-group-text" for="inputGroupFile02">
-                  Upload
-                </label> */}
               </div>
               <button
                 type="submit"
@@ -161,7 +156,6 @@ const AddFurniture = () => {
         </div>
       </div>
     </div>
-    // {/* </div> */}
   );
 };
 
