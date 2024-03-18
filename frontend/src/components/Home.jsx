@@ -21,9 +21,9 @@ const Home = () => {
           <h1 className="display-1">Things make us unique</h1>
         </div>
         <section className="bg-light">
-          <div className="container py-5">
+          <div className="container py-0">
             <div className="row">
-              <div className="col-md-3">
+              <div className="col-md-3 mb-5">
                 <div className="card shadow">
                   <img
                     className="img-fluid homeCardsImg"
@@ -41,7 +41,7 @@ const Home = () => {
                   </a>
                 </div>
               </div>
-              <div className="col-md-3">
+              <div className="col-md-3 mb-5">
                 <div className="card shadow">
                   <img
                     className="img-fluid homeCardsImg"
@@ -59,7 +59,7 @@ const Home = () => {
                   </a>
                 </div>
               </div>
-              <div className="col-md-3">
+              <div className="col-md-3 mb-5">
                 <div className="card shadow">
                   <video
                     autoPlay
@@ -80,7 +80,7 @@ const Home = () => {
                   </a>
                 </div>
               </div>
-              <div className="col-md-3">
+              <div className="col-md-3 mb-5">
                 <div className="card shadow">
                   <img
                     className="img-fluid homeCardsImg"
