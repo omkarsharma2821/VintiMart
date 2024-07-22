@@ -24,7 +24,7 @@ const Home = () => {
           <div className="container py-0">
             <div className="row">
               <div className="col-md-3 mb-5">
-                <div className="card shadow">
+                <div className="card shadow cards-home">
                   <img
                     className="img-fluid homeCardsImg"
                     src="images/G.gif"
@@ -42,7 +42,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="col-md-3 mb-5">
-                <div className="card shadow">
+                <div className="card shadow cards-home">
                   <img
                     className="img-fluid homeCardsImg"
                     src="images/G1.gif"
@@ -60,13 +60,18 @@ const Home = () => {
                 </div>
               </div>
               <div className="col-md-3 mb-5">
-                <div className="card shadow">
-                  <video
+                <div className="card shadow cards-home">
+                  {/* <video
                     autoPlay
                     loop
                     muted
                     className="homeCardsImg vdo"
                     src="images/G2.mp4"
+                    alt=""
+                  /> */}
+                  <img
+                    className="img-fluid homeCardsImg"
+                    src="images/G.gif"
                     alt=""
                   />
                   <h5 className="text-center mt-1 mx-4"> Customer support</h5>
@@ -81,7 +86,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="col-md-3 mb-5">
-                <div className="card shadow">
+                <div className="card shadow cards-home">
                   <img
                     className="img-fluid homeCardsImg"
                     src="images/G3.gif"

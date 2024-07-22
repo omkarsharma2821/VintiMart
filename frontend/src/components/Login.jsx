@@ -122,16 +122,16 @@ const Login = () => {
               </div>
               <button
                 type="submit"
-                className="btn btn-success mx-auto d-flex justify-content-center w-100 mt-4 mb-2 p-1 button"
+                className="btn btn-success mx-auto d-flex justify-content-center w-100 mt-4 mb-2 p-1"
               >
                 <h3>Submit</h3>
               </button>
-              <h5 className="d-flex justify-content-center">
+              <h6 className="d-flex justify-content-center">
                 Dont have an account -
-                <span>
-                  <NavLink to="/signup">create account</NavLink>
+                <span className="mr-2">
+                  <NavLink to="/signup"> create account</NavLink>
                 </span>
-              </h5>
+              </h6>
             </form>
           </div>
         </div>

@@ -6,10 +6,16 @@ import useCartContext from "../CartContext";
 const Navbar = ({ mycart }) => {
   const { loggedIn, setLoggedIn, logout } = useAppContext();
 
+  const handleLogout = () => {
+    if (window.confirm("Are you sure you want to logout?")) {
+      logout();
+    }
+  };
+
   const showLoginOptions = () => {
     if (loggedIn) {
       return (
-        <button className="btn btn-danger" onClick={logout}>
+        <button className="btn btn-danger" onClick={handleLogout}>
           Logout
         </button>
       );
