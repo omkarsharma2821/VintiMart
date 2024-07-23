@@ -87,7 +87,7 @@ const Signup = () => {
         backgroundPosition: 'center',
       }}
     >
-      <Card sx={{ width: "35%", boxShadow: 3, borderRadius:2 }}>
+       <Card sx={{ width: { xs: '90%', sm: '70%', md: '50%', lg: '35%' }, boxShadow: 3, borderRadius: 2 }}>
         <CardContent>
           <Typography variant="h4" align="center" sx={{ opacity: 0.7 }}>
             Get Started!
