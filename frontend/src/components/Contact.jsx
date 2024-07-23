@@ -118,7 +118,7 @@ const Contact = () => {
               fullWidth
               sx={{ mt: 2, mb: 3, textTransform: "none" }}
             >
-              <Typography variant="h5">Submit Query</Typography>
+              <Typography variant="h6">Submit Query</Typography>
             </Button>
           </form>
         </CardContent>

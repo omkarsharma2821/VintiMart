@@ -195,7 +195,7 @@ const AddFurniture = () => {
                 fullWidth
                 sx={{textTransform: "none" }}
               >
-                <Typography variant="h5">Add Furniture</Typography>
+                <Typography variant="h6">Add Furniture</Typography>
               </Button>
             </form>
           </CardContent>

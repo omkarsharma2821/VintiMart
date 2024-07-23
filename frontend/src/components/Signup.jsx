@@ -199,7 +199,7 @@ const Signup = () => {
                 variant="contained"
                 color="primary"
                 fullWidth
-                sx={{ mt: 3, mb: 1, py: 1, textTransform: "none" }}
+                sx={{ mt: 3, mb: 1, textTransform: "none" }}
               >
                 <Typography variant="h6">Create account</Typography>
               </Button>
