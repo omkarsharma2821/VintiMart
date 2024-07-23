@@ -6,6 +6,12 @@ import useCartContext from "../CartContext";
 const Navbar = ({ mycart }) => {
   const { loggedIn, setLoggedIn, logout } = useAppContext();
 
+  const handleNavClick = () => {
+    if (window.innerWidth < 992) {
+      document.querySelector('.navbar-toggler').click();
+    }
+  };
+  
   const handleLogout = () => {
     if (window.confirm("Are you sure you want to logout?")) {
       logout();
@@ -23,12 +29,12 @@ const Navbar = ({ mycart }) => {
       return (
         <>
           <button className="d-flex px-4 btn btn-outline-primary me-2 active">
-            <NavLink className="nav-link" to="/login">
+            <NavLink className="nav-link" to="/login" onClick={handleNavClick}>
               Login
             </NavLink>
           </button>
           <button className="d-flex px-4 btn btn-outline-primary active">
-            <NavLink className="nav-link" to="/signup">
+            <NavLink className="nav-link" to="/signup" onClick={handleNavClick}>
               Sign up
             </NavLink>
           </button>
@@ -61,33 +67,33 @@ const Navbar = ({ mycart }) => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/">
+              <NavLink className="nav-link" to="/" onClick={handleNavClick}>
                 Home
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/addfurniture">
+              <NavLink className="nav-link" to="/addfurniture" onClick={handleNavClick}>
                 Add Furniture
               </NavLink>
             </li>
 
             <li className="nav-item">
-              <NavLink className="nav-link" to="/browsefurniture">
+              <NavLink className="nav-link" to="/browsefurniture" onClick={handleNavClick}>
                 Browse Furniture
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/contact">
+              <NavLink className="nav-link" to="/contact" onClick={handleNavClick}>
                 Contact Us
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/view">
+              <NavLink className="nav-link" to="/view" onClick={handleNavClick}>
                 View Order
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/cartpage">
+              <NavLink className="nav-link" to="/cartpage" onClick={handleNavClick}>
                 <span className="px-2">
                   <i class="fa-solid fa-cart-shopping fa-xl style={color: #9d9dd8}"></i>
                 </span>
