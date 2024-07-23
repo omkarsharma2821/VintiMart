@@ -4,6 +4,18 @@ import { NavLink, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import * as Yup from "yup";
 import useAppContext from "../AppContext";
+import {
+  Box,
+  Button,
+  Container,
+  TextField,
+  Typography,
+  InputAdornment,
+  IconButton,
+  Card,
+  CardContent,
+} from "@mui/material";
+import { AccountCircle, Lock } from "@mui/icons-material";
 
 const LoginSchema = Yup.object().shape({
   password: Yup.string()
@@ -13,6 +25,7 @@ const LoginSchema = Yup.object().shape({
 
   email: Yup.string().email("Invalid email").required("Required"),
 });
+
 const Login = () => {
   const navigate = useNavigate();
   const { setLoggedIn } = useAppContext();
@@ -22,7 +35,6 @@ const Login = () => {
       email: "",
       password: "",
     },
-    // call back hmko nhi pta kb call hoga lekin aap call hoga sb condition met hogi  jaise isme submit kr  rhe
     onSubmit: async (values, { resetForm }) => {
       console.log(values);
 
@@ -51,7 +63,7 @@ const Login = () => {
         Swal.fire({
           icon: "error",
           title: "Login Failed",
-          text: "Email or Password is inavalid",
+          text: "Email or Password is invalid",
         });
       } else {
         Swal.fire({
@@ -61,83 +73,82 @@ const Login = () => {
         });
       }
       resetForm();
-      // send values to backened.
     },
     validationSchema: LoginSchema,
   });
 
   return (
-    <div className=" vh-100 p-5">
-      <div className="d-flex justify-content-center">
-        <header className="bg-dark w-50 card d-flex justify-content-center shadow-lg">
-          <div className="p-3">
-            <h1 className="text-center mb-3 text-white display-2">
-              Begin with Login
-            </h1>
-          </div>
-        </header>
-      </div>
-      <div className="d-flex justify-content-center">
-        <div className="card w-50 col-6 col-md-6 p-2 py-0 shadow-lg">
-          <div className="p-5">
+    <Box sx={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 5 }}>
+      <Card sx={{ width: '40%', boxShadow: 3 }}>
+        <CardContent>
+          <Typography variant="h3" align="center" >
+            Welcome back!
+          </Typography>
+          <Typography variant="h5" align="center" gutterBottom>
+            Please login to your account
+          </Typography>
+          <Container maxWidth="sm">
             <form onSubmit={loginForm.handleSubmit}>
-              <span style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
-                {loginForm.errors.email}
-              </span>
-              <div className="input-group ">
-                <span className="input-group-text">
-                  <i class="fa-solid fa-user "></i>
-                </span>
-                <div className="form-floating">
-                  <input
-                    id="email"
-                    onChange={loginForm.handleChange}
-                    value={loginForm.values.email}
-                    type="email"
-                    className="form-control"
-                    placeholder="Email address"
-                  />
-                  <label for="email">Email address</label>
-                </div>
-              </div>
-              <span style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
-                {loginForm.errors.password}
-              </span>
-              <div className="input-group">
-                <span className="input-group-text">
-                  {" "}
-                  <i className="fa-solid fa-lock"></i>
-                </span>
-                <div className="form-floating">
-                  <input
-                    id="password"
-                    onChange={loginForm.handleChange}
-                    value={loginForm.values.password}
-                    type="password"
-                    className="form-control"
-                    placeholder="Enter your password"
-                  />
-                  <label for="password">Password</label>
-                </div>
-              </div>
-              <button
+              <TextField
+                id="email"
+                label="Email address"
+                type="email"
+                fullWidth
+                margin="normal"
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <IconButton edge="start">
+                        <AccountCircle />
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                }}
+                onChange={loginForm.handleChange}
+                value={loginForm.values.email}
+                error={Boolean(loginForm.errors.email)}
+                helperText={loginForm.errors.email}
+              />
+              <TextField
+                id="password"
+                label="Password"
+                type="password"
+                fullWidth
+                margin="normal"
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <IconButton edge="start">
+                        <Lock />
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                }}
+                onChange={loginForm.handleChange}
+                value={loginForm.values.password}
+                error={Boolean(loginForm.errors.password)}
+                helperText={loginForm.errors.password}
+              />
+              <Button
                 type="submit"
-                className="btn btn-success mx-auto d-flex justify-content-center w-100 mt-4 mb-2 p-1"
+                variant="contained"
+                color="primary"
+                fullWidth
+                sx={{ mt: 4, mb: 2, py: 1 }}
               >
-                <h3>Submit</h3>
-              </button>
-              <h6 className="d-flex justify-content-center">
-                Dont have an account -
-                <span className="mr-2">
-                  <NavLink to="/signup"> create account</NavLink>
-                </span>
-              </h6>
+                <Typography variant="h6">Submit</Typography>
+              </Button>
+              <Typography align="center" variant="body1">
+                Don't have an account?{" "}
+                <NavLink to="/signup">Create account</NavLink>
+              </Typography>
             </form>
-          </div>
-        </div>
-      </div>
-    </div>
+          </Container>
+        </CardContent>
+      </Card>
+    </Box>
   );
 };
 
 export default Login;
+
