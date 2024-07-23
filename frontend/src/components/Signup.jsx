@@ -75,14 +75,31 @@ const Signup = () => {
   });
 
   return (
-    <Box sx={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0 }}>
-      <Card sx={{ width: '40%', boxShadow: 3 }}>
+    <Box
+      sx={{
+        height: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 5,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(${'/images/login.png'})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      <Card sx={{ width: "35%", boxShadow: 3, borderRadius:2 }}>
         <CardContent>
-          <Typography variant="h4" align="center" sx={{ opacity: 0.7 }} >
+          <Typography variant="h4" align="center" sx={{ opacity: 0.7 }}>
             Get Started!
           </Typography>
-          <Typography variant="h6" align="center" gutterBottom sx={{ opacity: 0.7 }}>
-          Go ahead fill up your details and start the journey</Typography>
+          <Typography
+            variant="h6"
+            align="center"
+            gutterBottom
+            sx={{ opacity: 0.7,mb:3 }}
+          >
+            Go ahead fill up your details and start the journey
+          </Typography>
           <Container maxWidth="sm">
             <form onSubmit={signupForm.handleSubmit}>
               <TextField
@@ -102,7 +119,9 @@ const Signup = () => {
                 }}
                 onChange={signupForm.handleChange}
                 value={signupForm.values.name}
-                error={Boolean(signupForm.touched.name && signupForm.errors.name)}
+                error={Boolean(
+                  signupForm.touched.name && signupForm.errors.name
+                )}
                 helperText={signupForm.touched.name && signupForm.errors.name}
               />
               <TextField
@@ -122,7 +141,9 @@ const Signup = () => {
                 }}
                 onChange={signupForm.handleChange}
                 value={signupForm.values.email}
-                error={Boolean(signupForm.touched.email && signupForm.errors.email)}
+                error={Boolean(
+                  signupForm.touched.email && signupForm.errors.email
+                )}
                 helperText={signupForm.touched.email && signupForm.errors.email}
               />
               <TextField
@@ -142,8 +163,12 @@ const Signup = () => {
                 }}
                 onChange={signupForm.handleChange}
                 value={signupForm.values.password}
-                error={Boolean(signupForm.touched.password && signupForm.errors.password)}
-                helperText={signupForm.touched.password && signupForm.errors.password}
+                error={Boolean(
+                  signupForm.touched.password && signupForm.errors.password
+                )}
+                helperText={
+                  signupForm.touched.password && signupForm.errors.password
+                }
               />
               <TextField
                 id="confirm"
@@ -162,22 +187,24 @@ const Signup = () => {
                 }}
                 onChange={signupForm.handleChange}
                 value={signupForm.values.confirm}
-                error={Boolean(signupForm.touched.confirm && signupForm.errors.confirm)}
-                helperText={signupForm.touched.confirm && signupForm.errors.confirm}
+                error={Boolean(
+                  signupForm.touched.confirm && signupForm.errors.confirm
+                )}
+                helperText={
+                  signupForm.touched.confirm && signupForm.errors.confirm
+                }
               />
               <Button
                 type="submit"
                 variant="contained"
                 color="primary"
                 fullWidth
-                sx={{ mt: 4, mb: 2, py: 1, textTransform: "none"
-                }}
+                sx={{ mt: 3, mb: 1, py: 1, textTransform: "none" }}
               >
                 <Typography variant="h6">Create account</Typography>
               </Button>
               <Typography align="center" variant="body1">
-                Already have an account?{" "}
-                <NavLink to="/login">Login</NavLink>
+                Already have an account? <NavLink to="/login">Login</NavLink>
               </Typography>
             </form>
           </Container>

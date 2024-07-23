@@ -35,10 +35,8 @@ function App() {
            
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
-            {/* <Route path="/drop" element={<Dropzone />} /> */}
-            <Route path="/view" element={<ViewOrders />} />
+            <Route path="/view" element={<UserAuth><ViewOrders /></UserAuth>} />
             <Route path="*" element={<NotFound />} />
-            {/* <Route path="/footer" element={<Footer/>} /> */}
           </Routes>
           <Footer/>
           </CartProvider>

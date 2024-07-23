@@ -43,7 +43,7 @@ const Navbar = ({ mycart }) => {
     }
   };
   return (
-    <nav className="sticky-top navbar navbar-expand-lg navFont shadow-lg">
+    <nav className="sticky-top navbar navbar-expand-lg navFont shadow-sm">
       <div className="container-fluid">
         <NavLink className="navbar-brand" to={"/"}>
           <span className="px-3" style={{ fontSize: "26px" }}>

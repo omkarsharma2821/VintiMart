@@ -78,13 +78,29 @@ const Login = () => {
   });
 
   return (
-    <Box sx={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 5 }}>
-      <Card sx={{ width: '40%', boxShadow: 3 }}>
+    <Box
+      sx={{
+        height: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 5,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(${'/images/login.png'})`,
+        backgroundSize: 'cover',
+        // backgroundPosition: 'center',
+      }}
+    >
+      <Card sx={{ width: "35%", boxShadow: 3, borderRadius:2 }}>
         <CardContent>
-          <Typography variant="h3" align="center" sx={{ opacity: 0.7 }} >
+          <Typography variant="h4" align="center" sx={{ opacity: 0.7 }}>
             Welcome back!
           </Typography>
-          <Typography variant="h5" align="center" sx={{ opacity: 0.7 }} gutterBottom>
+          <Typography
+            variant="h6"
+            align="center"
+            sx={{ opacity: 0.7, mb: 4 }}
+            gutterBottom
+          >
             Please login to your account
           </Typography>
           <Container maxWidth="sm">
@@ -134,7 +150,7 @@ const Login = () => {
                 variant="contained"
                 color="primary"
                 fullWidth
-                sx={{ mt: 4, mb: 2, py: 1, textTransform: "none" }}
+                sx={{ mt: 3, mb: 1, py: 1, textTransform: "none" }}
               >
                 <Typography variant="h6">Submit</Typography>
               </Button>
@@ -151,4 +167,3 @@ const Login = () => {
 };
 
 export default Login;
-
