@@ -1,8 +1,11 @@
-import { useFormik } from "formik";
 import React from "react";
+import { useFormik } from "formik";
 import { Navigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import * as Yup from "yup";
+import { Container, Typography, Box, TextField, Button, Card, CardContent } from "@mui/material";
+import { styled } from "@mui/system";
+import { AccountCircle, Email, Message } from "@mui/icons-material";
 
 const ContactSchema = Yup.object().shape({
   name: Yup.string()
@@ -13,105 +16,116 @@ const ContactSchema = Yup.object().shape({
 });
 
 const Contact = () => {
-  // initialize formik
   const contactForm = useFormik({
     initialValues: {
       name: "",
       email: "",
       message: "",
     },
-    // call back hmko nhi pta kb call hoga lekin aap call hoga sb condition met hogi  jaise isme submit kr  rhe
     onSubmit: (values, { resetForm }) => {
       console.log(values);
       resetForm();
-      // send values to backened.
-      if (true) {
-        Swal.fire({
-          icon: "success",
-          title: "Message Sent Successfully",
-          text: "Thank You, will reach you soon",
-        });
-        Navigate("/login");
-      }
+      Swal.fire({
+        icon: "success",
+        title: "Message Sent Successfully",
+        text: "Thank You, will reach you soon",
+      });
+      Navigate("/login");
     },
     validationSchema: ContactSchema,
   });
 
   return (
-    <div className=" p-5 vh-100">
-      <header className="bg-dark text-white w-50 rounded mx-auto shadow-lg">
-        <div className="container py-3 ">
-          <h2 className="text-center display-4 fw-semibold">
-            Get in touch with us
-          </h2>
-          <h5 className="text-center fw-light">
-            need help or have query? - we're here for you.
-          </h5>
-        </div>
-      </header>
-      <div className="d-flex">
-        <div className="card col-6 col-md-6 w-50 mx-auto shadow-lg">
-          <div className="p-5 py-3">
-            <form onSubmit={contactForm.handleSubmit}>
-              <span style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
-                {contactForm.errors.name}
-              </span>
-              <div className="input-group">
-                <span className="input-group-text">
-                  <i className="fa-solid fa-user"></i>
-                </span>
-                <div className="form-floating">
-                  <input
-                    id="name"
-                    onChange={contactForm.handleChange}
-                    value={contactForm.values.name}
-                    type="text"
-                    className="form-control "
-                    placeholder="Username"
-                  />
-                  <label>Username</label>
-                </div>
-              </div>
-              <span style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
-                {contactForm.errors.email}
-              </span>
-              <div className="input-group">
-                <span className="input-group-text">
-                  <i className="fa-solid fa-lock"></i>
-                </span>
-                <div className="form-floating">
-                  <input
-                    id="email"
-                    onChange={contactForm.handleChange}
-                    value={contactForm.values.email}
-                    type="email"
-                    className="form-control"
-                    placeholder="Email"
-                  />
-                  <label>Email address</label>
-                </div>
-              </div>
-              <span style={{ fontSize: 10, marginLeft: "10px", color: "red" }}>
-                {contactForm.errors.message}
-              </span>
-              <div className="form-floating">
-                <textarea
-                  id="message"
-                  className="form-control"
-                  placeholder="Type your message"
-                  onChange={contactForm.handleChange}
-                  value={contactForm.values.message}
-                />
-                <label>Message</label>
-              </div>
-              <button className="col-6 text-center btn btn-success w-100 p-2 button mx-auto d-flex justify-content-center mt-5 mb-5">
-                <h5>Submit Query</h5>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Box
+      sx={{
+        height: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 5,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(${'/images/login.png'})`,
+        backgroundSize: 'cover',
+        // backgroundPosition: 'center',
+      }}
+    >
+    <Card sx={{ width: { xs: '90%', sm: '70%', md: '50%', lg: '32%' }, boxShadow: 3, borderRadius: 2}}>
+        <CardContent sx={{ p: 5 }}>
+        <Typography variant="h4" align="center" sx={{mb:4  }}>
+          Get in touch with us!
+        </Typography>
+          <form onSubmit={contactForm.handleSubmit}>
+            <Box sx={{ mb: 2 }}>
+              <TextField
+                fullWidth
+                id="name"
+                name="name"
+                label="Username"
+                placeholder="Username"
+                value={contactForm.values.name}
+                onChange={contactForm.handleChange}
+                error={contactForm.touched.name && Boolean(contactForm.errors.name)}
+                helperText={contactForm.touched.name && contactForm.errors.name}
+                InputProps={{
+                  startAdornment: (
+                    <AccountCircle sx={{ mr: 1 }} />
+                  ),
+                }}
+              />
+            </Box>
+            <Box sx={{ mb: 2 }}>
+              <TextField
+                fullWidth
+                id="email"
+                name="email"
+                label="Email address"
+                placeholder="Email"
+                type="email"
+                value={contactForm.values.email}
+                onChange={contactForm.handleChange}
+                error={contactForm.touched.email && Boolean(contactForm.errors.email)}
+                helperText={contactForm.touched.email && contactForm.errors.email}
+                InputProps={{
+                  startAdornment: (
+                    <Email sx={{ mr: 1 }} />
+                  ),
+                }}
+              />
+            </Box>
+            <Box sx={{ mb: 2 }}>
+              <TextField
+                fullWidth
+                id="message"
+                name="message"
+                label="Message"
+                placeholder="Type your message"
+                multiline
+                minRows={1}
+                value={contactForm.values.message}
+                onChange={contactForm.handleChange}
+                error={contactForm.touched.message && Boolean(contactForm.errors.message)}
+                helperText={contactForm.touched.message && contactForm.errors.message}
+                InputProps={{
+                  startAdornment: (
+                    <Message sx={{ mr: 1 }} />
+                  ),
+                }}
+              />
+            </Box>
+            <Button
+              type="submit"
+              variant="contained"
+              color="success"
+              fullWidth
+              sx={{ mt: 2, mb: 3, textTransform: "none" }}
+            >
+              <Typography variant="h5">Submit Query</Typography>
+            </Button>
+          </form>
+        </CardContent>
+    </Card>
+    </Box>
   );
 };
+
 export default Contact;
+
