@@ -1,8 +1,20 @@
 import { useFormik } from "formik";
 import React from "react";
-import { NavLink, Navigate, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import * as Yup from "yup";
+import {
+  Box,
+  Button,
+  Container,
+  TextField,
+  Typography,
+  InputAdornment,
+  IconButton,
+  Card,
+  CardContent,
+} from "@mui/material";
+import { AccountCircle, Email, Lock } from "@mui/icons-material";
 
 const SignupSchema = Yup.object().shape({
   name: Yup.string()
@@ -21,7 +33,7 @@ const SignupSchema = Yup.object().shape({
 
 const Signup = () => {
   const navigate = useNavigate();
-  // initialize formik
+
   const signupForm = useFormik({
     initialValues: {
       name: "",
@@ -29,7 +41,6 @@ const Signup = () => {
       password: "",
       confirm: "",
     },
-    // call back hmko nhi pta kb call hoga lekin aap call hoga sb condition met hogi  jaise isme submit kr  rhe
     onSubmit: async (values, { resetForm }) => {
       console.log(values);
       resetForm();
@@ -38,7 +49,7 @@ const Signup = () => {
         `${process.env.REACT_APP_VINTIMART_URL}/user/add`,
         {
           method: "POST",
-          body: JSON.stringify(values), //here all the things are case senstive in fetch.
+          body: JSON.stringify(values),
           headers: {
             "Content-Type": "application/json",
           },
@@ -59,131 +70,120 @@ const Signup = () => {
           text: "Something went wrong",
         });
       }
-      // send values to backened.
     },
     validationSchema: SignupSchema,
   });
 
   return (
-    <div className=" p-5">
-      <header className="bg-dark text-white w-50 mx-auto rounded mb-0 shadow-lg">
-        <div className="container py-3">
-          <h6 className="text-center display-6 fw-semibold ">
-            Register for free, Hurry up!!
-          </h6>
-          <h4 className="text-center fw-light">
-            Create account to save your journey
-          </h4>
-        </div>
-      </header>
-      <div className="vh-100">
-        <div className="d-flex justify-content-center">
-          <div className="card w-50 col-6 col-md-6 shadow-lg">
-            <div className="p-5 py-3">
-              {/* <h2 className="text-center fw-semibold ">SignUp</h2> */}
-              <form onSubmit={signupForm.handleSubmit}>
-                <span
-                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
-                >
-                  {signupForm.touched.name && signupForm.errors.name}
-                </span>
-                <div class="input-group">
-                  <span class="input-group-text">
-                    <i class="fa-solid fa-user"></i>
-                  </span>
-                  <div className="form-floating">
-                    <input
-                      id="name"
-                      onChange={signupForm.handleChange}
-                      value={signupForm.values.name}
-                      type="text"
-                      className="form-control"
-                      placeholder="Username"
-                    />
-                    <label>Username</label>
-                  </div>
-                </div>
-                <span
-                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
-                >
-                  {signupForm.touched.email && signupForm.errors.email}
-                </span>
-                <div class="input-group">
-                  <span class="input-group-text">
-                    <i class="fa-solid fa-envelope"></i>
-                  </span>
-                  <div className="form-floating">
-                    <input
-                      id="email"
-                      onChange={signupForm.handleChange}
-                      value={signupForm.values.email}
-                      type="email"
-                      className="form-control"
-                      placeholder="Email"
-                    />
-                    <label>Email</label>
-                  </div>
-                </div>
-                <span
-                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
-                >
-                  {signupForm.touched.password && signupForm.errors.password}
-                </span>
-                <div class="input-group">
-                  <span class="input-group-text">
-                    <i class="fa-solid fa-lock"></i>
-                  </span>
-                  <div className="form-floating">
-                    <input
-                      id="password"
-                      onChange={signupForm.handleChange}
-                      value={signupForm.values.password}
-                      type="password"
-                      className="form-control"
-                      placeholder="password"
-                    />
-                    <label>Password</label>
-                  </div>
-                </div>
-                <span
-                  style={{ fontSize: 10, marginLeft: "10px", color: "red" }}
-                >
-                  {signupForm.touched.confirm && signupForm.errors.confirm}
-                </span>
-                <div className="input-group mb-3">
-                  <span class="input-group-text">
-                    <i class="fa-solid fa-lock"></i>
-                  </span>
-                  <div className="form-floating">
-                    <input
-                      id="confirm"
-                      onChange={signupForm.handleChange}
-                      value={signupForm.values.confirmpassword}
-                      type="password"
-                      className="form-control"
-                      placeholder="password"
-                    />
-                    <label>Confirm Password</label>
-                  </div>
-                </div>
-                <button
-                  type="submit"
-                  className="col-6 btn btn-success w-100 p-2 mt-4 mb-2 mx-auto d-flex justify-content-center button"
-                >
-                  <h5>Create account</h5>
-                </button>
-                <span className="d-flex justify-content-center mb-0">
-                  Already have an account -
-                  <span>
-                    <NavLink to="/login">Login</NavLink>
-                  </span>
-                </span>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Box sx={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0 }}>
+      <Card sx={{ width: '40%', boxShadow: 3 }}>
+        <CardContent>
+          <Typography variant="h4" align="center" sx={{ opacity: 0.7 }} >
+            Get Started!
+          </Typography>
+          <Typography variant="h6" align="center" gutterBottom sx={{ opacity: 0.7 }}>
+          Go ahead fill up your details and start the journey</Typography>
+          <Container maxWidth="sm">
+            <form onSubmit={signupForm.handleSubmit}>
+              <TextField
+                id="name"
+                label="Username"
+                type="text"
+                fullWidth
+                margin="normal"
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <IconButton edge="start">
+                        <AccountCircle />
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                }}
+                onChange={signupForm.handleChange}
+                value={signupForm.values.name}
+                error={Boolean(signupForm.touched.name && signupForm.errors.name)}
+                helperText={signupForm.touched.name && signupForm.errors.name}
+              />
+              <TextField
+                id="email"
+                label="Email"
+                type="email"
+                fullWidth
+                margin="normal"
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <IconButton edge="start">
+                        <Email />
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                }}
+                onChange={signupForm.handleChange}
+                value={signupForm.values.email}
+                error={Boolean(signupForm.touched.email && signupForm.errors.email)}
+                helperText={signupForm.touched.email && signupForm.errors.email}
+              />
+              <TextField
+                id="password"
+                label="Password"
+                type="password"
+                fullWidth
+                margin="normal"
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <IconButton edge="start">
+                        <Lock />
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                }}
+                onChange={signupForm.handleChange}
+                value={signupForm.values.password}
+                error={Boolean(signupForm.touched.password && signupForm.errors.password)}
+                helperText={signupForm.touched.password && signupForm.errors.password}
+              />
+              <TextField
+                id="confirm"
+                label="Confirm Password"
+                type="password"
+                fullWidth
+                margin="normal"
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <IconButton edge="start">
+                        <Lock />
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                }}
+                onChange={signupForm.handleChange}
+                value={signupForm.values.confirm}
+                error={Boolean(signupForm.touched.confirm && signupForm.errors.confirm)}
+                helperText={signupForm.touched.confirm && signupForm.errors.confirm}
+              />
+              <Button
+                type="submit"
+                variant="contained"
+                color="primary"
+                fullWidth
+                sx={{ mt: 4, mb: 2, py: 1, textTransform: "none"
+                }}
+              >
+                <Typography variant="h6">Create account</Typography>
+              </Button>
+              <Typography align="center" variant="body1">
+                Already have an account?{" "}
+                <NavLink to="/login">Login</NavLink>
+              </Typography>
+            </form>
+          </Container>
+        </CardContent>
+      </Card>
+    </Box>
   );
 };
 
