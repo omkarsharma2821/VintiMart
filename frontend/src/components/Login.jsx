@@ -90,7 +90,7 @@ const Login = () => {
         // backgroundPosition: 'center',
       }}
     >
-       <Card sx={{ width: { xs: '90%', sm: '70%', md: '50%', lg: '32%' }, boxShadow: 3, borderRadius: 2 }}>
+       <Card sx={{ width: { xs: '90%', sm: '70%', md: '50%', lg: '27%' }, boxShadow: 3, borderRadius: 2 }}>
         <CardContent>
           <Typography variant="h4" align="center" sx={{ opacity: 0.7 }}>
             Welcome back!

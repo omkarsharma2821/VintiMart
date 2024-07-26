@@ -87,19 +87,19 @@ const Signup = () => {
         backgroundPosition: 'center',
       }}
     >
-       <Card sx={{ width: { xs: '90%', sm: '70%', md: '50%', lg: '35%' }, boxShadow: 3, borderRadius: 2 }}>
+       <Card sx={{ width: { xs: '90%', sm: '70%', md: '50%', lg: '30%' }, boxShadow: 3, borderRadius: 2 }}>
         <CardContent>
-          <Typography variant="h4" align="center" sx={{ opacity: 0.7 }}>
-            Get Started!
+          <Typography variant="h4" align="center" sx={{ opacity: 0.7, mb:2 }}>
+            Sign up!
           </Typography>
-          <Typography
+          {/* <Typography
             variant="h6"
             align="center"
             gutterBottom
             sx={{ opacity: 0.7,mb:3 }}
           >
             Go ahead fill up your details and start the journey
-          </Typography>
+          </Typography> */}
           <Container maxWidth="sm">
             <form onSubmit={signupForm.handleSubmit}>
               <TextField
@@ -199,7 +199,7 @@ const Signup = () => {
                 variant="contained"
                 color="primary"
                 fullWidth
-                sx={{ mt: 3, mb: 1, textTransform: "none" }}
+                sx={{ mt: 2, mb: 1, textTransform: "none" }}
               >
                 <Typography variant="h6">Create account</Typography>
               </Button>
