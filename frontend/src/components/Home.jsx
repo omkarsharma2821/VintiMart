@@ -36,7 +36,7 @@ const Home = () => {
                     className="d-flex justify-content-center"
                   >
                     <button className="btn btn-primary mt-1 mx-4 mb-3 w-75">
-                      Visit Store
+                    Explore Our Range
                     </button>
                   </a>
                 </div>
@@ -50,11 +50,11 @@ const Home = () => {
                   />
                   <h5 className="text-center mt-1 mx-4">Satisfied Customer</h5>
                   <a
-                    href="/browsefurniture"
+                    href="/view"
                     className="d-flex justify-content-center"
                   >
                     <button className="btn btn-primary mt-1 mx-4 mb-3 w-75">
-                      Visit Store
+                    Manage Orders
                     </button>
                   </a>
                 </div>
@@ -68,11 +68,11 @@ const Home = () => {
                   />
                   <h5 className="text-center mt-1 mx-4">Customer Support</h5>
                   <a
-                    href="/browsefurniture"
+                    href="/contact"
                     className="d-flex justify-content-center"
                   >
                     <button className="btn btn-primary mt-1 mx-4 mb-3 w-75">
-                      Visit Store
+                      Contact Us
                     </button>
                   </a>
                 </div>
@@ -86,11 +86,11 @@ const Home = () => {
                   />
                   <h5 className="text-center mt-1 mx-4">Home Decor</h5>
                   <a
-                    href="/browsefurniture"
+                    href="/addfurniture"
                     className="d-flex justify-content-center"
                   >
                     <button className="btn btn-primary mt-1 mx-4 mb-3 w-75">
-                      Visit Store
+                    Add to Collection
                     </button>
                   </a>
                 </div>
