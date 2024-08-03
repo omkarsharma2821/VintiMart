@@ -90,7 +90,7 @@ const Login = () => {
         // backgroundPosition: 'center',
       }}
     >
-       <Card sx={{ width: { xs: '90%', sm: '70%', md: '50%', lg: '27%' }, boxShadow: 3, borderRadius: 2 }}>
+       <Card sx={{ width: { xs: '90%', sm: '70%', md: '50%', lg: '26%' }, boxShadow: 3, borderRadius: 2 }}>
         <CardContent>
           <Typography variant="h4" align="center" sx={{ opacity: 0.7 }}>
             Welcome back!
@@ -98,7 +98,7 @@ const Login = () => {
           <Typography
             variant="h6"
             align="center"
-            sx={{ opacity: 0.7, mb: 4 }}
+            sx={{ opacity: 0.7, mb: 3 }}
             gutterBottom
           >
             Please login to your account
@@ -156,9 +156,11 @@ const Login = () => {
               </Button>
               <Typography align="center" variant="body1">
                 Don't have an account?{" "}
-                <NavLink to="/signup">Create account</NavLink>
+                <Box component={NavLink} to="/signup" sx={{ textDecoration: 'none' }}>
+                Create account
+                </Box>
               </Typography>
-            </form>
+              <Typography sx={{ fontSize: '14px', mt:2 }}>Email: demouser@gmail.com <br/> Password: Demo123</Typography>              </form>
           </Container>
         </CardContent>
       </Card>
